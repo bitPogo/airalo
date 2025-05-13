@@ -1,8 +1,8 @@
 plugins {
-    alias(dependencyCatalog.plugins.android.application)
-    alias(dependencyCatalog.plugins.kotlin.android)
-    alias(dependencyCatalog.plugins.kotlin.compose)
-    alias(dependencyCatalog.plugins.serialization)
+    alias(buildDependencyCatalog.plugins.android.application)
+    alias(buildDependencyCatalog.plugins.kotlin.android)
+    alias(buildDependencyCatalog.plugins.kotlin.compose)
+    alias(buildDependencyCatalog.plugins.serialization)
     alias(testDependencyCatalog.plugins.roborazzi)
 }
 

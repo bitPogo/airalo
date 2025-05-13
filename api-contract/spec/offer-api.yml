@@ -1,0 +1,250 @@
+openapi: 3.0.1
+info:
+  description: Craftspeople Mobile API
+  version: v1
+  title: Craftspeople Mobile API
+servers:
+  - url: https://www.airalo.com/api/v2/
+
+paths:
+  /countries:
+    get:
+      tags:
+        - Overview
+      description: "Provide a list of countries which have offers"
+      summary: "List of Countries"
+      operationId: countries
+      parameters:
+        - in: header
+          name: Accept-Language
+          schema:
+            type: string
+            default: "en"
+          required: false
+          description: The language used by a customer.
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum: [ popular ]
+      responses:
+        '200':
+          description: "Successful retrieval"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Country'
+        '404':
+          description: "Missing entry"
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/Error'
+
+        '500':
+          description: "Backend down"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /countries/{id}:
+    get:
+      tags:
+        - CountryOffers
+      description: "Provide a list of offers for local eSIMs"
+      summary: "Offer of local eSIMs"
+      operationId: countryOffers
+      parameters:
+        - in: header
+          name: Accept-Language
+          schema:
+            type: string
+            default: "en"
+          required: false
+          description: The language used by a customer.
+
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: The country Id
+
+      responses:
+        '200':
+          description: "Successful retrieval"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Offer'
+        '404':
+          description: "Missing entry"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '500':
+          description: "Backend down"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Image:
+      type: object
+      required:
+        - url
+      properties:
+        url:
+          type: string
+          title: Url
+          readOnly: true
+
+    Country:
+      type: object
+      required:
+        - id
+        - title
+        - slug
+        - image
+      properties:
+        id:
+          type: integer
+          title: CountryId
+          readOnly: true
+        title:
+          type: string
+          title: Name of the Country
+          readOnly: true
+        slug:
+          type: string
+          title: Normalizes name of the Country (english)
+          readOnly: true
+        image:
+          $ref: '#/components/schemas/Image'
+
+    Operator:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The unique identifier for the operator.
+        title:
+          type: string
+          description: The title (name) of the operator.
+        style:
+          type: string
+          description: The style of the operator.
+        gradient_start:
+          type: string
+          description: Start color of a gradient.
+        gradient_end:
+          type: string
+          description: End color of a gradient.
+        type:
+          type: string
+          description: The type of operator (e.g., local).
+        image:
+          $ref: '#/components/schemas/Image'
+        countries:
+          type: array
+          description: List of countries covered by the operator.
+          items:
+            $ref: '#/components/schemas/Country'
+      required:
+        - id
+        - title
+        - style
+        - gradient_start
+        - gradient_end
+        - image
+        - countries
+
+    Package:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The unique identifier for the package.
+        slug:
+          type: string
+          description: The slug for the package.
+        type:
+          type: string
+          description: The type of package (e.g., sim).
+        price:
+          type: number
+          format: float
+          description: The price of the package.
+        title:
+          type: string
+          description: The title of the package (e.g., "1 GB - 7 Days").
+        data:
+          type: string
+          description: The data allowance (e.g., "1 GB", "Unlimited").
+        validity:
+          type: string
+          description: The validity period (e.g., "7 Days", "30 Days").
+        operator:
+          $ref: '#/components/schemas/Operator'
+      required:
+        - id
+        - slug
+        - type
+        - price
+        - title
+        - validity
+        - day
+        - operator
+
+    Offer:
+      type: object
+      required:
+        - id
+        - title
+        - slug
+        - image
+      properties:
+        id:
+          type: string
+          title: CountryId
+          readOnly: true
+        title:
+          type: string
+          title: Name of the Country
+          readOnly: true
+        slug:
+          type: string
+          title: Normalizes name of the Country (english)
+          readOnly: true
+        image:
+          $ref: '#/components/schemas/Image'
+        packages:
+          type: array
+          description: List of available eSIM packages.
+          items:
+            $ref: '#/components/schemas/Package'
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          title: ErrorCode
+          readOnly: true
+        title:
+          type: string
+          title: ErrorTitle
+          readOnly: true
+        message:
+          type: string
+          title: ErrorMessage
+          readOnly: true

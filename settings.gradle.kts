@@ -37,6 +37,10 @@ dependencyResolutionManagement {
             from(files("./gradle/runtime.versions.toml"))
         }
 
+        create("buildDependencyCatalog") {
+            from(files("./gradle/build.versions.toml"))
+        }
+
         create("testDependencyCatalog") {
             from(files("./gradle/test.versions.toml"))
         }
@@ -44,4 +48,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Airalo Sample Project"
-include(":app")
+include(
+    ":app",
+    ":offer:business"
+)

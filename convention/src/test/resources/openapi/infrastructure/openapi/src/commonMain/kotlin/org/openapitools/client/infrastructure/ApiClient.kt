@@ -52,7 +52,7 @@ open class ApiClient(
     private val authentications: kotlin.collections.Map<String, Authentication>? = null
 
     companion object {
-        const val BASE_URL: String = " https://www.airalo.com/api/v2"
+        const val BASE_URL: String = "https://www.airalo.com/api/v2"
         val JSON_DEFAULT: Json = Json {
             ignoreUnknownKeys = true
             prettyPrint = true

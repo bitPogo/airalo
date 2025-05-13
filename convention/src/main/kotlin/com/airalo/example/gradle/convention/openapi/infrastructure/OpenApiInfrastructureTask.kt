@@ -65,7 +65,7 @@ abstract class OpenApiInfrastructureTask : OpenApiGeneratorTask() {
 
         const val emptyContractApi = """openapi: 3.0.1
 servers:
-  - url:  https://www.airalo.com/api/v2
+  - url: https://www.airalo.com/api/v2/
 info:
   description: Airalo Example Project
   version: v2
@@ -76,7 +76,7 @@ paths:
       tags:
         - Nothing
       description: "Nothing important"
-      operationId: what every
+      operationId: what ever
       parameters: [ ]
       responses:
         '200':

@@ -23,5 +23,14 @@ kotlin {
                 optIn("kotlin.Experimental")
             }
         }
+
+        commonTest {
+            dependencies {
+                implementation(testDependencyCatalog.anitbytes.assertions)
+                implementation(projects.test.mockclientfactory)
+                implementation(testDependencyCatalog.resources)
+                implementation(testDependencyCatalog.coroutine)
+            }
+        }
     }
 }

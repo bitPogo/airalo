@@ -94,6 +94,10 @@ gradlePlugin {
             id = "com.airalo.example.plugin.kmp-android-compose-configuration"
             implementationClass = "com.airalo.example.gradle.convention.kmp.KmpAndroidWithComposeConfiguration"
         }
+        register("kmpJvmConfiguration") {
+            id = "com.airalo.example.plugin.kmp-jvm-configuration"
+            implementationClass = "com.airalo.example.gradle.convention.kmp.KmpJvmConfiguration"
+        }
         register("DependencyAnalysis") {
             id = "com.airalo.example.plugin.dependency-analysis-configuration"
             implementationClass = "com.airalo.example.gradle.convention.quality.dependency.DependencyAnalysis"

@@ -78,6 +78,7 @@ convention-android-library-plain = { id = "com.airalo.example.plugin.android-lib
 convention-android-library-compose = { id = "com.airalo.example.plugin.android-library-compose-configuration", version = "unspecified" }
 convention-kmp-android-plain = { id = "com.airalo.example.plugin.kmp-android-configuration", version = "unspecified" }
 convention-kmp-android-compose = { id = "com.airalo.example.plugin.kmp-android-compose-configuration", version = "unspecified" }
+convention-kmp-jvm = { id = "com.airalo.example.plugin.kmp-jvm-configuration", version = "unspecified" }
 convention-check-dependency = { id = "com.airalo.example.plugin.dependency-analysis-configuration", version = "unspecified" }
 convention-check-staticAnalysis = { id = "com.airalo.example.plugin.static-analysis-configuration", version = "unspecified" }
 convention-check-qualtyMetric = { id = "com.airalo.example.plugin.quality-metric-configuration", version = "unspecified" }

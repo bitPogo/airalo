@@ -4,7 +4,7 @@ java-android-toolchain = "17"
 java-android-compability = "8"
 sdk-min = "26"
 sdk-target = "35"
-openapi-generator = "7.12.0"
+openapi-generator = "7.13.0"
 
 kotlin = "2.1.20"
 # [Spotless](https://plugins.gradle.org/plugin/com.diffplug.gradle.spotless)
@@ -14,7 +14,7 @@ ktlint = "1.2.1"
 # [gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin)
 buildConfig = "5.6.0"
 # [Android Gradle Plugin](https://mvnrepository.com/artifact/com.android.tools.build/gradle)
-agp = "8.9.2"
+agp = "8.10.0"
 # [Detekt](https://github.com/detekt/detekt)
 detekt = "1.23.8"
 # [Tony's pizza - Dependency Health](https://github.com/autonomousapps/dependency-analysis-gradle-plugin)

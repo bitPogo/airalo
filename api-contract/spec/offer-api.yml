@@ -10,7 +10,7 @@ paths:
   /countries:
     get:
       tags:
-        - Overview
+        - Countries
       description: "Provide a list of countries which have offers"
       summary: "List of Countries"
       operationId: countries
@@ -20,13 +20,15 @@ paths:
           schema:
             type: string
             default: "en"
-          required: false
+          required: true
           description: The language used by a customer.
         - in: query
           name: type
           schema:
             type: string
             enum: [ popular ]
+            default: popular
+          required: true
       responses:
         '200':
           description: "Successful retrieval"
@@ -53,7 +55,7 @@ paths:
   /countries/{id}:
     get:
       tags:
-        - CountryOffers
+        - OffersInCountry
       description: "Provide a list of offers for local eSIMs"
       summary: "Offer of local eSIMs"
       operationId: countryOffers

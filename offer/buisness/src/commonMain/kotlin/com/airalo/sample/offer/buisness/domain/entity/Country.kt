@@ -1,6 +1,4 @@
-package com.airalo.sample.offer.buisness.entity
-
-import com.airalo.sample.offer.buisness.domain.entity.Id
+package com.airalo.sample.offer.buisness.domain.entity
 
 @JvmInline
 value class Flag(val url: String)

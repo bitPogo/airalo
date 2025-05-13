@@ -1,0 +1,7 @@
+appId: com.airalo.sample
+jsEngine: graaljs
+---
+
+- tapOn: ${output.offer}
+- extendedWaitUntil:
+    visible: ${output.offer.operator}

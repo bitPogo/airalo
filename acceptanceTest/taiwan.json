@@ -1,0 +1,647 @@
+{
+  "id": 229,
+  "slug": "taiwan",
+  "title": "Taiwan",
+  "image": {
+    "width": 132,
+    "height": 99,
+    "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+  },
+  "seo": {
+    "title": null,
+    "keywords": null,
+    "description": null
+  },
+  "packages": [
+    {
+      "id": 7673,
+      "slug": "xie-xie-7days-1gb",
+      "type": "sim",
+      "price": 4.5,
+      "title": "1 GB - 7 Days",
+      "data": "1 GB",
+      "voice": null,
+      "text": null,
+      "validity": "7 Days",
+      "day": 7,
+      "amount": 1024,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": "This eSIM doesn't come with a phone number.",
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 7675,
+      "slug": "xie-xie-15days-2gb",
+      "type": "sim",
+      "price": 7,
+      "title": "2 GB - 15 Days",
+      "data": "2 GB",
+      "voice": null,
+      "text": null,
+      "validity": "15 Days",
+      "day": 15,
+      "amount": 2048,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": null,
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 7677,
+      "slug": "xie-xie-30days-3gb",
+      "type": "sim",
+      "price": 9.5,
+      "title": "3 GB - 30 Days",
+      "data": "3 GB",
+      "voice": null,
+      "text": null,
+      "validity": "30 Days",
+      "day": 30,
+      "amount": 3072,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": "This eSIM doesn't come with a phone number.",
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 7679,
+      "slug": "xie-xie-30days-5gb",
+      "type": "sim",
+      "price": 13,
+      "title": "5 GB - 30 Days",
+      "data": "5 GB",
+      "voice": null,
+      "text": null,
+      "validity": "30 Days",
+      "day": 30,
+      "amount": 5120,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": "This eSIM doesn't come with a phone number.",
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 7681,
+      "slug": "xie-xie-30days-10gb",
+      "type": "sim",
+      "price": 21,
+      "title": "10 GB - 30 Days",
+      "data": "10 GB",
+      "voice": null,
+      "text": null,
+      "validity": "30 Days",
+      "day": 30,
+      "amount": 10240,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": "This eSIM doesn't come with a phone number.",
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 7683,
+      "slug": "xie-xie-30days-20gb",
+      "type": "sim",
+      "price": 32,
+      "title": "20 GB - 30 Days",
+      "data": "20 GB",
+      "voice": null,
+      "text": null,
+      "validity": "30 Days",
+      "day": 30,
+      "amount": 20480,
+      "is_unlimited": false,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": null,
+      "calling_credit": null,
+      "fair_usage_policy": null,
+      "is_stock": true,
+      "operator": {
+        "id": 514,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": true,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/8fbbd281-66cd-4e37-81ef-11c992cf1758.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    },
+    {
+      "id": 8367,
+      "slug": "xie-xie-unlimited-10days",
+      "type": "sim",
+      "price": 35,
+      "title": "Unlimited - 10 Days",
+      "data": "Unlimited",
+      "voice": null,
+      "text": null,
+      "validity": "10 Days",
+      "day": 10,
+      "amount": 66651,
+      "is_unlimited": true,
+      "is_unlimited_text": false,
+      "is_unlimited_voice": false,
+      "note": null,
+      "short_info": null,
+      "calling_credit": null,
+      "fair_usage_policy": "Lower speed rate of 1 Mbps after 3 GB usage per day",
+      "is_stock": true,
+      "operator": {
+        "id": 1028,
+        "title": "Xie Xie",
+        "style": "light",
+        "gradient_start": "#4a2050",
+        "gradient_end": "#321535",
+        "is_kyc_verify": 0,
+        "type": "local",
+        "is_prepaid": false,
+        "is_multi_package": true,
+        "plan_type": "data",
+        "activation_policy": "first-usage",
+        "rechargeability": false,
+        "other_info": null,
+        "apn_type": "single",
+        "apn_type_ios": "automatic",
+        "apn_type_android": "single",
+        "apn_single": "globaldata",
+        "apn_backup": null,
+        "apn_automatic_ios": "globaldata",
+        "apn_automatic_android": null,
+        "data_roaming": true,
+        "airplane_toggle": false,
+        "apn": null,
+        "networks": [
+          {
+            "network": "Chunghwa",
+            "service_type": "5G",
+            "tadig": null,
+            "status": true,
+            "coverage_url": null
+          }
+        ],
+        "info": [
+          "5G Data-only eSIM.",
+          "Rechargeable online with no expiry.",
+          "Operates on the Chunghwa network in Taiwan."
+        ],
+        "image": {
+          "width": 1035,
+          "height": 653,
+          "url": "https://cdn.airalo.com/images/0649c57a-47c8-4ed6-ae9c-05d91b403487.png"
+        },
+        "is_routing": true,
+        "countries": [
+          {
+            "id": 229,
+            "slug": "taiwan",
+            "title": "Taiwan",
+            "image": {
+              "width": 132,
+              "height": 99,
+              "url": "https://cdn.airalo.com/images/5592454e-3d9a-40bc-aa0c-97895974ba34.png"
+            }
+          }
+        ],
+        "provider": "a0c5f4ce60e0ca6ae9f0cc69cba1f8bee329e6d91c7cc8dda8c68a7fa2622746",
+        "kyc_provider": null,
+        "kyc_type": null,
+        "operator_legal_name": null,
+        "privacy_policy_url": null,
+        "is_kyc_one_time": false,
+        "is_operator_kyc": false,
+        "kyc_restriction": null,
+        "kyc_expiry_duration": null,
+        "kyc_addr_required": false
+      },
+      "is_most_popular": false,
+      "estimated_points": null
+    }
+  ]
+}

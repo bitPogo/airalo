@@ -1,0 +1,23 @@
+appId: com.airalo.sample
+jsEngine: graaljs
+---
+
+- launchApp:
+    clearState: true
+- runScript: ./strings.js
+- runScript: ./setup.js
+
+# When the App opens Then I see a list of all available countries
+- assertVisible: ${output.countries[0]}
+- assertVisible: ${output.countries[1]}
+- assertVisible: ${output.countries[2]}
+- assertVisible: ${output.countries[3]}
+- assertVisible: ${output.countries[4]}
+- scrollUntilVisible:
+      element: ${output.countries[(output.length - 1)/2]}
+- scrollUntilVisible:
+      element: ${output.countries[output.length - 1]}
+
+# Given the App started When I tap on a Country Then I see the local eSIM offer
+- evalScript: ${output.offer = output.taiwan}
+- runFlow: ./offer/showOffer.yaml

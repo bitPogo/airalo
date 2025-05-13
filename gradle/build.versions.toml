@@ -1,13 +1,79 @@
 [versions]
-openapi = "7.13.0"
-agp = "8.7.3"
+java-jvm = "17"
+java-android-toolchain = "17"
+java-android-compability = "8"
+sdk-min = "26"
+sdk-target = "35"
+openapi-generator = "7.12.0"
+
 kotlin = "2.1.20"
+# [Spotless](https://plugins.gradle.org/plugin/com.diffplug.gradle.spotless)
+spotless = "7.0.3"
+# [KTLint](https://github.com/pinterest/ktlint)
+ktlint = "1.2.1"
+# [gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin)
+buildConfig = "5.6.0"
+# [Android Gradle Plugin](https://mvnrepository.com/artifact/com.android.tools.build/gradle)
+agp = "8.9.2"
+# [Detekt](https://github.com/detekt/detekt)
+detekt = "1.23.8"
+# [Tony's pizza - Dependency Health](https://github.com/autonomousapps/dependency-analysis-gradle-plugin)
+dependencyHealth = "2.13.1"
+# [OWASP](https://plugins.gradle.org/plugin/org.owasp.dependencycheck)
+owasp = "12.1.0"
+# [Kover](https://github.com/Kotlin/kotlinx-kover/releases)
+kover = "0.9.1"
+# [Jacoco](https://github.com/jacoco/jacoco/releases)
+jacoco = "0.8.12"
+# [Gradle-License-Report](https://github.com/jk1/Gradle-License-Report/releases)
+licenseCheck = "2.9"
+# [About Libraries](https://github.com/mikepenz/AboutLibraries/releases)
+licenseCompliance = "11.6.3"
+# [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/releases)
+jetbrains-compose = "1.7.3"
+#[SQLDelight](https://github.com/cashapp/sqldelight/releases)
+cashapp-sqldelight = "2.0.2"
+#[Roborazzi](https://github.com/takahirom/roborazzi/releases)
+roborazzi = "1.43.1"
+#[KSP](https://github.com/google/ksp/releases)
+ksp = "2.1.20-1.0.31"
+
+[libraries]
+spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+ktlint = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlint" }
+agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-embedded = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "kotlin"}
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+dependencyHealth = { module = "com.autonomousapps.dependency-analysis:com.autonomousapps.dependency-analysis.gradle.plugin", version.ref = "dependencyHealth" }
+owasp = { module = "org.owasp:dependency-check-gradle", version.ref = "owasp" }
+kover = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kover" }
+jacoco = { module = "org.jacoco:org.jacoco.core", version.ref = "jacoco" }
+licenseCheck = { module = "com.github.jk1:gradle-license-report", version.ref = "licenseCheck" }
+licenseCompliance = { module = "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin", version.ref = "licenseCompliance" }
+jetbrains-compose = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "jetbrains-compose" }
+compose-compiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+cashapp-sqldelight = { module = "app.cash.sqldelight:gradle-plugin", version.ref = "cashapp-sqldelight" }
+roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi-gradle-plugin", version.ref = "roborazzi" }
+openapi-generator = { module = "org.openapitools:openapi-generator-gradle-plugin", version.ref = "openapi-generator" }
+ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-kmp = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-openapi = { id = "org.openapi.generator", version.ref = "openapi" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+dependencyHealth = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyHealth" }
+owasp = { id = "org.owasp.dependencycheck", version.ref = "owasp" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+licenseCheck = { id = "com.github.jk1.dependency-license-report", version.ref = "licenseCheck" }
+licenseCompliance = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "licenseCompliance" }
+jetbrains-compose-core = { id = "org.jetbrains.compose", version.ref = "jetbrains-compose" }
+jetbrains-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
+openapi = { id = "org.openapi.generator", version.ref = "openapi-generator" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

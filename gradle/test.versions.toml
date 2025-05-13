@@ -19,22 +19,17 @@ android-ktx = "1.6.1"
 ktor = "3.1.1"
 coroutine = "1.10.1"
 resources = "0.10.0"
-kfixture = "0.4.0-SNAPSHOT"
+kfixture = "0.4.0"
 roborazzi = "1.43.1"
 espresso = "3.6.1"
 turbine = "1.2.0"
 # [ic4j android](https://developer.android.com/guide/topics/resources/internationalization)
 icu4j = "68.2"
 
-android-work = "2.10.1"
-
-okhttp = "4.12.0"
 testUtils = "86ec4d6"
-
 coil = "3.1.0"
 
 [libraries]
-kotlin-annotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
 kotlin-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
 kotlin-junit4 = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit5-bom = { module = "org.junit:junit-bom", version.ref = "junit5" }
@@ -68,19 +63,16 @@ roborazzi-junit = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule
 espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 cashapp-turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 icu4j = { group = "com.ibm.icu", name = "icu4j", version.ref = "icu4j" }
-coil = { module = "io.coil-kt.coil3:coil-test", version.ref = "coil" }
 
-android-work = { module = "androidx.work:work-testing", version.ref = "android-work" }
-
-mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okhttp"}
 anitbytes-assertions = { module  = "tech.antibytes.test-utils-kmp:test-utils", version.ref = "testUtils" }
 
+coil = { module = "io.coil-kt.coil3:coil-test", version.ref = "coil" }
 
 [bundles]
-compose = ["compose-ui-junit", "compose-ui-core"]
-junit5 = [ "junit5-engine", "junit5-api", "kotlin-junit5" ]
-koin = [ "koin-test", "koin-junit5" ]
-roborazzi = [
+convention-instrumented-compose = ["compose-ui-junit", "compose-ui-core"]
+convention-junit5 = [ "junit5-engine", "junit5-api", "kotlin-junit5" ]
+koin-test = [ "koin-test", "koin-junit5" ]
+convention-roborazzi = [
     "junit5-legacyEngine",
     "androidx-junit",
     "compose-ui-core",
@@ -95,4 +87,3 @@ roborazzi = [
 
 [plugins]
 resources = { id = "com.goncalossilva.resources", version.ref = "resources" }
-roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }

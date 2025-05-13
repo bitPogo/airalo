@@ -1,0 +1,83 @@
+[versions]
+# [Kotlin](https://kotlinlang.org/docs/releases.html)
+kotlin = "2.0.0"
+# [JUnit5](https://github.com/junit-team/junit5/)
+junit5 = "5.10.3"
+# [JUnit4](https://github.com/junit-team/junit4)
+junit4 = "4.13.2"
+# [mockk](http://mockk.io)
+mockk = "1.13.11"
+# [kotlinFixture](https://github.com/appmattus/kotlinfixture)
+jvmFixture = "1.2.0"
+androidx-testRunner = "1.6.1"
+androidx-junit = "1.2.1"
+compose-ui-core = "1.6.8"
+compose-ui-junit = "1.6.8"
+compose-ui-manifest = "1.6.8"
+robolectric = "4.13"
+android-ktx = "1.6.1"
+ktor = "2.3.12"
+coroutine = "1.8.1"
+resources = "0.4.1"
+kfixture = "0.4.0"
+roborazzi = "1.21.0"
+espresso = "3.6.1"
+turbine = "1.1.0"
+# [ic4j android](https://developer.android.com/guide/topics/resources/internationalization)
+icu4j = "68.2"
+
+[libraries]
+kotlin-annotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
+kotlin-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
+kotlin-junit4 = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit5-bom = { module = "org.junit:junit-bom", version.ref = "junit5" }
+junit5-runtime = { module = "org.junit.jupiter:junit-jupiter" }
+junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+junit5-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
+junit5-legacyEngine = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junit5" }
+junit5-parameterized = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit5" }
+junit5-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit5" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+mockk-core = { module = "io.mockk:mockk", version.ref = "mockk" }
+mockk-instumented = { module = "io.mockk:mockk-jvm", version.ref = "mockk" }
+jvmFixture = { module = "com.appmattus.fixture:fixture", version.ref = "jvmFixture" }
+androidx-testRunner = { module = "androidx.test:runner", version.ref = "androidx-testRunner" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+compose-ui-core = { module = "androidx.compose.ui:ui-test", version.ref = "compose-ui-core" }
+compose-ui-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose-ui-junit" }
+compose-ui-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose-ui-manifest" }
+kotlin-common = { group = "org.jetbrains.kotlin", name = "kotlin-test-common", version.ref = "kotlin" }
+koin-test = { module = "io.insert-koin:koin-test" }
+koin-junit5 = { module = "io.insert-koin:koin-test-junit5" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+androidx-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "android-ktx" }
+ktor-mockclient = { module = "io.ktor:ktor-client-mock", version.ref ="ktor" }
+coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine" }
+resources = { module = "com.goncalossilva:resources", version.ref = "resources" }
+kfixture = { module = "tech.antibytes.kfixture:core", version.ref = "kfixture" }
+roborazzi-core = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
+roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
+roborazzi-junit = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule", version.ref = "roborazzi" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+cashapp-turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+icu4j = { group = "com.ibm.icu", name = "icu4j", version.ref = "icu4j" }
+
+[bundles]
+convention-instrumented-compose = ["compose-ui-junit", "compose-ui-core"]
+convention-junit5 = [ "junit5-engine", "junit5-api", "kotlin-junit5" ]
+koin-test = [ "koin-test", "koin-junit5" ]
+convention-roborazzi = [
+    "junit5-legacyEngine",
+    "androidx-junit",
+    "compose-ui-core",
+    "compose-ui-junit",
+    "compose-ui-manifest",
+    "robolectric",
+    "roborazzi-core",
+    "roborazzi-compose",
+    "roborazzi-junit",
+    "espresso-core"
+]
+
+[plugins]
+resources = { id = "com.goncalossilva.resources", version.ref = "resources" }

@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("dependencyCatalog") {
+            from(files("./gradle/dependency.versions.toml"))
+        }
+
+        create("testDependencyCatalog") {
+            from(files("./gradle/test.dependency.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "test-project"

@@ -1,4 +1,7 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
+    includeBuild("convention")
     repositories {
         google {
             content {
@@ -11,10 +14,17 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+plugins {
+    // Apply the foojay-resolver plugin to allow automatic download of JDKs
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.10.0"
+}
+
 dependencyResolutionManagement {
     val antibytesPlugins = "^tech\\.antibytes\\.[\\.a-z\\-]+"
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
         maven {
@@ -30,8 +40,7 @@ dependencyResolutionManagement {
             }
         }
     }
-}
-dependencyResolutionManagement {
+
     versionCatalogs {
         create("dependencyCatalog") {
             from(files("./gradle/runtime.versions.toml"))
@@ -47,8 +56,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Airalo Sample Project"
+rootProject.name = "Airalo_Sample_Project"
 include(
     ":app",
-    ":offer:business"
+    ":offer:buisness",
 )

@@ -1,0 +1,7 @@
+plugins {
+    id("com.airalo.example.plugin.openapi-infrastructure")
+}
+
+android {
+    namespace = "test"
+}

@@ -1,0 +1,104 @@
+[versions]
+kotlin = "2.0.0"
+appcompat = "1.7.0"
+compose-ui = "1.6.8"
+compose-activity = "1.9.0"
+compose-material3 = "1.2.1"
+compose-fakemanifest = "1.6.8"
+# [About Libraries](https://github.com/mikepenz/AboutLibraries/releases)
+sentry-kmp-version = "0.7.1"
+licenseCompliance = "11.2.2"
+openapi = "7.7.0"
+ktor = "2.3.12"
+coroutines = "1.8.1"
+serialization = "1.7.1"
+dateTime = "0.6.0"
+firebase-bom = "33.1.1"
+posthog = "3.3.1"
+koin-bom = "3.5.6"
+cashapp-sqldelight = "2.0.2"
+buildKonfig = "0.15.1"
+voyager = "1.0.0"
+jb-viewmodel = "2.8.0"
+koin-annotations = "1.3.1"
+pullrefresh = "1.4.0-beta03"
+coilVersion = "2.3.5"
+webViewVersion = "1.9.20"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-material = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-pullrefresh = { group = "dev.materii.pullrefresh", name = "pullrefresh", version.ref = "pullrefresh" }
+licenseCompliance-compose = { module = "com.mikepenz:aboutlibraries-compose-m3", version.ref = "licenseCompliance" }
+licenseCompliance-core = { module = "com.mikepenz:aboutlibraries-core", version.ref = "licenseCompliance" }
+compose-fakemanifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose-fakemanifest" }
+sentry-kmp = { module = "io.sentry:sentry-kotlin-multiplatform" , version.ref = "sentry-kmp-version"}
+cashapp-sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "cashapp-sqldelight" }
+cashapp-sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "cashapp-sqldelight" }
+cashapp-sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "cashapp-sqldelight" }
+
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenModel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
+voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+serialisation = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
+jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-serialization-core = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "dateTime" }
+jb-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jb-viewmodel" }
+
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+firebase-config = { module = "com.google.firebase:firebase-config" }
+
+posthog = { module = "com.posthog:posthog-android", version.ref = "posthog" }
+
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+convention-koin-annotations-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations"}
+
+coilKmp = { module = "com.github.skydoves:landscapist-coil", version.ref = "coilVersion" }
+webView = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "webViewVersion" }
+
+[bundles]
+app-compose = [ "compose-ui", "compose-material", "compose-activity" ]
+voyager-compose = [ "voyager-navigator" ]
+convention-compose = []
+convention-debug-compose = [ "compose-fakemanifest" ]
+firebase = [ "firebase-analytics", "firebase-crashlytics", "firebase-perf", "firebase-config" ]
+convention-koin = [ "koin-core", "koin-annotations" ]
+convention-openapi = [ "coroutines", "serialisation", "ktor-core", "ktor-serialization-core", "ktor-contentNegotiation", "ktor-serialization-json", "datetime" ]
+
+[plugins]
+convention-java-library = { id = "com.airalo.example.gradle.plugin.java-library-configuration", version = "unspecified" }
+convention-android-appliction = { id = "com.airalo.example.gradle.plugin.android-application-configuration", version = "unspecified" }
+convention-android-library-plain = { id = "com.airalo.example.gradle.plugin.android-library-configuration", version = "unspecified" }
+convention-android-library-compose = { id = "com.airalo.example.gradle.plugin.android-library-compose-configuration", version = "unspecified" }
+convention-kmp-android-plain = { id = "com.airalo.example.gradle.plugin.kmp-android-configuration", version = "unspecified" }
+convention-kmp-android-compose = { id = "com.airalo.example.gradle.plugin.kmp-android-compose-configuration", version = "unspecified" }
+convention-kmp-jvm = { id = "com.airalo.example.gradle.plugin.kmp-jvm-configuration", version = "unspecified" }
+convention-check-dependency = { id = "com.airalo.example.gradle.plugin.dependency-analysis-configuration", version = "unspecified" }
+convention-check-staticAnalysis = { id = "com.airalo.example.gradle.plugin.static-analysis-configuration", version = "unspecified" }
+convention-check-qualtyMetric = { id = "com.airalo.example.gradle.plugin.quality-metric-configuration", version = "unspecified" }
+convention-utility-gitHook = { id = "com.airalo.example.gradle.plugin.git-hook", version = "unspecified" }
+convention-parameter = { id = "com.airalo.example.gradle.parameter", version = "unspecified" }
+convention-openapi-infrastructure = { id = "com.airalo.example.gradle.plugin.openapi-infrastructure", version = "unspecified"}
+
+openapi = { id = "org.openapi.generator", version.ref = "openapi" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+cashapp-sqldelight = { id = "app.cash.sqldelight", version.ref = "cashapp-sqldelight" }
+buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }

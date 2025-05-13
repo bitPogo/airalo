@@ -1,0 +1,43 @@
+{
+  "allowedLicenses": [
+    {
+      "moduleLicense": ".*MIT.*"
+    },
+    {
+      "moduleLicense": "Apache License, Version 2.0"
+    },
+    {
+      "moduleLicense": "The Apache .*"
+    },
+    {
+      "moduleLicense": "Apache.*"
+    },
+    {
+      "moduleLicense": "Android Software Development Kit License Agreement"
+    },
+    {
+      "moduleLicense": "BSD-3-Clause"
+    },
+    {
+      "moduleLicense": "New BSD License"
+    },
+    {
+      "moduleLicense": "BSD style"
+    },
+    {
+      "moduleLicense": ".*CDDL.*"
+    },
+    {
+      "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE 2.1"
+    },
+    {
+      "moduleLicense": "Eclipse Public License .*"
+    },
+    {
+      "moduleLicense": "EPL-2.0"
+    },
+    {
+      "moduleLicense": null
+    }
+  ]
+}

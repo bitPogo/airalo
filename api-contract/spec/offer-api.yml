@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
-  description: Craftspeople Mobile API
-  version: v1
-  title: Craftspeople Mobile API
+  description: Airalo Example Project
+  version: v2
+  title: Airalo Example Project
 servers:
   - url: https://www.airalo.com/api/v2/
 

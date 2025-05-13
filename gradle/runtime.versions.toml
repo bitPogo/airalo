@@ -1,18 +1,26 @@
 [versions]
-coreKtx = "1.16.0"
-lifecycleRuntimeKtx = "2.9.0"
-activityCompose = "1.10.1"
+kotlin = "2.1.20"
+appcompat = "1.7.0"
+compose-ui = "1.7.8"
+compose-activity = "1.10.1"
+compose-material3 = "1.3.1"
+compose-fakemanifest = "1.7.8"
+coreKtx = "1.15.0"
+lifecycleRuntimeKtx = "2.8.7"
 composeBom = "2025.05.00"
-coil = "3.1.0"
-retrofit = "2.11.0"
-koin = "4.0.4"
+ktor = "3.1.1"
+coroutines = "1.10.1"
 serialization = "1.8.0"
+dateTime = "0.6.2"
+koin-bom = "4.0.3"
+cashapp-sqldelight = "2.0.2"
+koin-annotations = "2.0.0"
+coil = "3.1.0"
 
 [libraries]
-koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
@@ -20,15 +28,60 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
+
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
+compose-material = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-fakemanifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose-fakemanifest" }
+
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+serialisation = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
+jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-serialization-core = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "dateTime" }
+
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-compose = { module = "io.insert-koin:koin-compose" }
+koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+convention-koin-annotations-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations" }
+
+coil-core = { module = "io.coil-kt.coil3:coil-core", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
-coil-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
-retrofit-kotlin-serialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
-serialisation-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
-serialisation-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil" }
 
+cashapp-sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "cashapp-sqldelight" }
+cashapp-sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "cashapp-sqldelight" }
+cashapp-sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "cashapp-sqldelight" }
 
+[bundles]
+app-compose = ["compose-ui", "compose-material", "androidx-activity-compose"]
+coil = ["coil-core", "coil-compose", "coil-network"]
+convention-compose = []
+convention-debug-compose = [ "compose-fakemanifest" ]
+convention-koin = [ "koin-core", "koin-annotations" ]
+convention-openapi = [ "coroutines", "serialisation", "ktor-core", "ktor-serialization-core", "ktor-contentNegotiation", "ktor-serialization-json", "datetime" ]
 
+[plugins]
+convention-android-appliction = { id = "com.airalo.example.plugin.android-application-configuration", version = "unspecified" }
+convention-android-library-plain = { id = "com.airalo.example.plugin.android-library-configuration", version = "unspecified" }
+convention-android-library-compose = { id = "com.airalo.example.plugin.android-library-compose-configuration", version = "unspecified" }
+convention-kmp-android-plain = { id = "com.airalo.example.plugin.kmp-android-configuration", version = "unspecified" }
+convention-kmp-android-compose = { id = "com.airalo.example.plugin.kmp-android-compose-configuration", version = "unspecified" }
+convention-check-dependency = { id = "com.airalo.example.plugin.dependency-analysis-configuration", version = "unspecified" }
+convention-check-staticAnalysis = { id = "com.airalo.example.plugin.static-analysis-configuration", version = "unspecified" }
+convention-check-qualtyMetric = { id = "com.airalo.example.plugin.quality-metric-configuration", version = "unspecified" }
+convention-openapi-infrastructure = { id = "com.airalo.example.plugin.openapi-infrastructure", version = "unspecified" }
+convention-openapi-client = { id = "com.airalo.example.plugin.openapi-client", version = "unspecified" }
+
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

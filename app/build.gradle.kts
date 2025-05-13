@@ -1,50 +1,13 @@
 plugins {
-    alias(buildDependencyCatalog.plugins.android.application)
-    alias(buildDependencyCatalog.plugins.kotlin.android)
-    alias(buildDependencyCatalog.plugins.kotlin.compose)
-    alias(buildDependencyCatalog.plugins.serialization)
-    alias(testDependencyCatalog.plugins.roborazzi)
+    id(dependencyCatalog.plugins.convention.android.appliction.get().pluginId)
 }
 
 android {
     namespace = "com.airalo.sample"
-    compileSdk = 35
-
     defaultConfig {
         applicationId = "com.airalo.sample"
-        minSdk = 31
-        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    buildFeatures {
-        compose = true
-        buildConfig = true
-    }
-
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
     }
 }
 
@@ -66,33 +29,20 @@ dependencies {
     implementation(dependencyCatalog.koin.android)
     implementation(dependencyCatalog.koin.androidx.compose)
     implementation(dependencyCatalog.coil.compose)
-    implementation(dependencyCatalog.coil)
+    implementation(dependencyCatalog.coil.core)
     implementation(dependencyCatalog.coil.network)
-    implementation(dependencyCatalog.retrofit)
-    implementation(dependencyCatalog.serialisation.core)
-    implementation(dependencyCatalog.serialisation.json)
-    implementation(dependencyCatalog.retrofit.kotlin.serialization)
 
     debugImplementation(dependencyCatalog.androidx.ui.tooling)
     debugImplementation(dependencyCatalog.androidx.ui.test.manifest)
 
     testImplementation(testDependencyCatalog.cashapp.turbine)
-    testImplementation(testDependencyCatalog.bundles.junit5)
-    testImplementation(testDependencyCatalog.bundles.koin)
-    testImplementation(testDependencyCatalog.bundles.roborazzi)
-    testImplementation(testDependencyCatalog.bundles.compose)
-    testImplementation(testDependencyCatalog.mockwebserver)
+    testImplementation(testDependencyCatalog.bundles.convention.roborazzi)
     testImplementation(testDependencyCatalog.anitbytes.assertions)
     testImplementation(testDependencyCatalog.kfixture)
     testImplementation(testDependencyCatalog.mockk.core)
     testImplementation(testDependencyCatalog.coil)
 
-
     androidTestImplementation(testDependencyCatalog.compose.ui.junit)
     androidTestImplementation(testDependencyCatalog.androidx.junit)
     androidTestImplementation(testDependencyCatalog.espresso.core)
-}
-
-tasks.withType(Test::class.java) {
-    useJUnitPlatform()
 }

@@ -14,6 +14,6 @@ fun CountryName(content: String) {
         textAlign = TextAlign.Left,
         style = overviewCountryName,
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxSize(),
     )
 }

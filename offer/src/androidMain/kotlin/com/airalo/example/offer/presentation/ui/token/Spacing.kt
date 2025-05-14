@@ -6,5 +6,4 @@ object Spacing {
     val Horizontal = object {
         val screenPadding = 20.dp
     }
-
 }

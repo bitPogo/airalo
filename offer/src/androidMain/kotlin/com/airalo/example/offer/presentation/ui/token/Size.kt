@@ -14,6 +14,15 @@ object Size {
             height = 28.dp,
             width = 37.dp,
         )
+        val trailingArrow = Dimension(
+            width = 7.dp,
+            height = 12.dp,
+        )
+        val icon = Dimension(
+            width = 22.dp,
+            height = 22.dp,
+        )
     }
+
     val surface = Surface
 }

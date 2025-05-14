@@ -65,5 +65,5 @@ include(
 
 include(
     ":test:mockclientfactory",
-    ":test:roborazzi"
+    ":test:roborazzi",
 )

@@ -6,7 +6,7 @@ import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.Flag
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
-import com.airalo.example.offer.presentation.CountryOfferOverviewInteractorContract
+import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
 import com.goncalossilva.resources.Resource
 import kotlin.test.Test
 import kotlinx.coroutines.test.runTest

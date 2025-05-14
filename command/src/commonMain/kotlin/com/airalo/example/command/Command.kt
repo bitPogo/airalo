@@ -3,7 +3,7 @@ package com.airalo.example.command
 /**
  * Marker interface for command receivers.
  */
-sealed interface CommandReceiver
+interface CommandReceiver
 
 /**
 * Contract which defines a command that can be executed by a [CommandReceiver].
@@ -21,7 +21,7 @@ fun interface Command<T : CommandReceiver> {
  * Contract for a command executor.
  * @param T The type of [CommandReceiver] that the command operates on.
  */
-fun interface CommandExecutor<T: CommandReceiver> {
+fun interface CommandExecutor<T : CommandReceiver> {
     /**
      * Executes a given command.
      *
@@ -29,4 +29,3 @@ fun interface CommandExecutor<T: CommandReceiver> {
      */
     operator fun invoke(command: Command<in T>)
 }
-

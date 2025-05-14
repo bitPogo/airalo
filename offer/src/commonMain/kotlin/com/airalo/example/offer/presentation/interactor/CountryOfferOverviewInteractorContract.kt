@@ -1,4 +1,4 @@
-package com.airalo.example.offer.presentation
+package com.airalo.example.offer.presentation.interactor
 
 import com.airalo.example.offer.domain.entity.Country
 import kotlinx.coroutines.flow.SharedFlow

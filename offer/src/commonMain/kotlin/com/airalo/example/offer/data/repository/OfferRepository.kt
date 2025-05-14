@@ -22,8 +22,7 @@ internal class OfferRepository(
     override suspend fun listPopularCountries(): List<Country> {
         return try {
             countryApi.countries(type = CountriesApi.TypeCountries.popular).body().toEntity()
-        } catch (e: Throwable) {
-            println(e)
+        } catch (_: Throwable) {
             emptyList()
         }
     }

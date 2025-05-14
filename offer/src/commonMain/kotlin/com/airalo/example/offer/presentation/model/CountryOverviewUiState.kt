@@ -36,8 +36,6 @@ sealed class CountryOverviewUiState(open val countries: List<Country>) {
     data class Error(override val countries: List<Country>) : CountryOverviewUiState(countries)
 }
 
-
-
 /**
  * Contract for to hold states of the country overview.
  */

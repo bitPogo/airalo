@@ -2,7 +2,7 @@ package com.airalo.example.offer.domain.interactor
 
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
-import com.airalo.example.offer.presentation.CountryOfferOverviewInteractorContract
+import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow

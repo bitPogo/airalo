@@ -28,6 +28,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(projects.command)
+
+                implementation(dependencyCatalog.jb.viewmodel)
                 implementation(compose.foundation)
             }
         }

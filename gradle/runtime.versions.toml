@@ -16,6 +16,7 @@ koin-bom = "4.0.3"
 cashapp-sqldelight = "2.0.2"
 koin-annotations = "2.0.0"
 coil = "3.1.0"
+jb-viewmodel = "2.8.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -63,6 +64,8 @@ coil-network = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "
 cashapp-sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "cashapp-sqldelight" }
 cashapp-sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "cashapp-sqldelight" }
 cashapp-sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "cashapp-sqldelight" }
+
+jb-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jb-viewmodel" }
 
 [bundles]
 app-compose = ["compose-ui", "compose-material", "androidx-activity-compose"]

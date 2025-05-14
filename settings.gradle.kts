@@ -59,6 +59,7 @@ dependencyResolutionManagement {
 rootProject.name = "Airalo_Sample_Project"
 include(
     ":app",
+    ":command",
     ":offer",
 )
 

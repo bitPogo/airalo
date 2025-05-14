@@ -1,6 +1,7 @@
 package com.airalo.example.offer.presentation.model
 
 import com.airalo.example.offer.domain.entity.Country
+import kotlinx.coroutines.flow.StateFlow
 
 /**
  * States for the Country Offer Overview of the UI.
@@ -33,4 +34,18 @@ sealed class CountryOverviewUiState(open val countries: List<Country>) {
      * @property countries The list of countries carried over from the previous state.
      */
     data class Error(override val countries: List<Country>) : CountryOverviewUiState(countries)
+}
+
+
+
+/**
+ * Contract for to hold states of the country overview.
+ */
+interface CountryOfferOverviewStateHolder {
+    /**
+     * The current state of the country overview.
+     *
+     * The current [CountryOverviewUiState] allows other components to collect the state and react to changes.
+     */
+    val countries: StateFlow<CountryOverviewUiState>
 }

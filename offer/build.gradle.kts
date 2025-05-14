@@ -27,6 +27,7 @@ kotlin {
 
         commonMain {
             dependencies {
+                implementation(projects.command)
                 implementation(compose.foundation)
             }
         }

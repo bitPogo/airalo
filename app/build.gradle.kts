@@ -3,9 +3,9 @@ plugins {
 }
 
 android {
-    namespace = "com.airalo.sample"
+    namespace = "com.airalo.example"
     defaultConfig {
-        applicationId = "com.airalo.sample"
+        applicationId = "com.airalo.example"
         versionCode = 1
         versionName = "1.0"
     }

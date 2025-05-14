@@ -1,0 +1,31 @@
+package com.airalo.example.offer.presentation.ui.atom
+
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.ColorPainter
+import com.airalo.example.offer.R
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
+import coil3.compose.AsyncImage
+import com.airalo.example.offer.domain.entity.CountryFlagUri
+import com.airalo.example.offer.presentation.ui.token.Size
+
+@Composable
+fun CountryFlag(
+    uri: CountryFlagUri,
+) {
+    AsyncImage(
+        model = uri.url,
+        error = painterResource(R.drawable.flag_of_flags),
+        contentDescription = null,
+        modifier = Modifier
+            .width(Size.surface.countryFlag.width)
+            .height(Size.surface.countryFlag.height),
+    )
+}

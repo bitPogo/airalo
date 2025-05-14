@@ -3,7 +3,7 @@ package com.airalo.example.offer.domain.repository
 import com.airalo.example.offer.domain.entity.Country
 
 /**
- * Contract for the OfferRepository, which deals with the main data retrieval
+ * Contract for the OfferRepository, which deals with the androidMain data retrieval
  */
 fun interface OfferRepositoryContract {
     /**

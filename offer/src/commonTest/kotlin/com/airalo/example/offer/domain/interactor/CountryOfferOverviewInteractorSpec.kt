@@ -3,7 +3,7 @@ package com.airalo.example.offer.domain.interactor
 import app.cash.turbine.test
 import com.airalo.example.offer.api.model.CountryDTO
 import com.airalo.example.offer.domain.entity.Country
-import com.airalo.example.offer.domain.entity.Flag
+import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
 import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
@@ -26,7 +26,7 @@ class CountryOfferOverviewInteractorSpec {
     ).map {
         Country(
             id = Id(it.id),
-            flag = Flag(it.image.url),
+            flag = CountryFlagUri(it.image.url),
             name = it.title,
         )
     }

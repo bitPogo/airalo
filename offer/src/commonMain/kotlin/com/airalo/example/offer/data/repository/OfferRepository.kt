@@ -3,7 +3,7 @@ package com.airalo.example.offer.data.repository
 import com.airalo.example.offer.api.client.CountriesApi
 import com.airalo.example.offer.api.model.CountryDTO
 import com.airalo.example.offer.domain.entity.Country
-import com.airalo.example.offer.domain.entity.Flag
+import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
 
@@ -14,7 +14,7 @@ internal class OfferRepository(
         map { dto ->
             Country(
                 id = Id(dto.id),
-                flag = Flag(dto.image.url),
+                flag = CountryFlagUri(dto.image.url),
                 name = dto.title,
             )
         }

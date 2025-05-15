@@ -22,7 +22,7 @@ object Font {
         color = Color.charcoalGray,
     )
 
-    val overviewSectionTitle = TextStyle(
+    val sectionTitle = TextStyle(
         fontFamily = IbmPlexSans,
         fontWeight = FontWeight.SemiBold,
         fontSize = 19.sp,
@@ -36,6 +36,33 @@ object Font {
         fontWeight = FontWeight.Medium,
         fontSize = 15.sp,
         lineHeight = 20.sp,
+        color = Color.charcoalGray,
+    )
+
+    val offerDetailLabel = TextStyle(
+        fontFamily = IbmPlexSans,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 11.sp,
+        lineHeight = 14.sp,
+        letterSpacing = 1.sp,
+        color = Color.charcoalGray,
+    )
+
+    val offerDetailValue = TextStyle(
+        fontFamily = IbmPlexSans,
+        fontWeight = FontWeight.Medium,
+        fontSize = 17.sp,
+        lineHeight = 20.sp,
+        letterSpacing = (-0.1).sp,
+        color = Color.charcoalGray,
+    )
+
+    val offerButtonLabel = TextStyle(
+        fontFamily = IbmPlexSans,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 11.sp,
+        lineHeight = 11.sp,
+        letterSpacing = 1.sp,
         color = Color.charcoalGray,
     )
 }

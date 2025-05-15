@@ -29,7 +29,7 @@ fun SectionTitle(
     Text(
         content,
         textAlign = TextAlign.Left,
-        style = Font.overviewSectionTitle,
+        style = Font.sectionTitle,
         modifier = Modifier
             .fillMaxSize()
             .semantics {

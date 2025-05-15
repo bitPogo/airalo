@@ -1,11 +1,13 @@
 package com.airalo.example.offer.presentation.ui.organism
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.presentation.ui.atom.MVerticalSpace
@@ -35,8 +37,12 @@ fun CountryList(countries: List<Country>) {
                 MVerticalSpace()
             }
             items(countries.size) { index ->
-                CountryItem(countries[index])
-                XSVerticalSpace()
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    CountryItem(countries[index])
+                    XSVerticalSpace()
+                }
             }
         }
     }

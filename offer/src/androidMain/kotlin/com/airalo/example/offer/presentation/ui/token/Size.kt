@@ -54,6 +54,10 @@ object Size {
             width = 335.dp,
             height = 58.dp,
         )
+        val detailBoxActionField = Dimension(
+            width = 335.dp,
+            height = 84.dp,
+        )
     }
 
     val surface = Surface

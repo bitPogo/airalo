@@ -59,7 +59,7 @@ fun CountryItem(country: Country) {
                 .semantics {
                     contentDescription = country.name
                 }
-                .fillMaxWidth()
+                .width(Size.surface.countryItem.width)
                 .height(Size.surface.countryItem.height)
                 .background(Color.white, shape = Shape.medium),
         ) {

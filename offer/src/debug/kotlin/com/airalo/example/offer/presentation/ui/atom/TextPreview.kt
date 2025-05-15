@@ -32,7 +32,7 @@ fun OfferDetailValuePreview() {
 @Composable
 fun OfferDetailButtonLabelPreview() {
     Box {
-        OfferDetailButtonLabel("Yes!", contentDescription = "No!")
+        PurchaseButtonLabel("Yes!", contentDescription = "No!")
     }
 }
 

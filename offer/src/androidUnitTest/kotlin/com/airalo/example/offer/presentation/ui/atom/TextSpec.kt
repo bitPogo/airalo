@@ -65,7 +65,7 @@ class TextSpec : RoborazziTest() {
 
         // Act
         subjectUnderTest.setContent {
-            OfferDetailButtonLabel("Yes!", contentDescription)
+            PurchaseButtonLabel("Yes!", contentDescription)
         }
 
         // Assert

@@ -2,4 +2,6 @@
     <string name="country_offer_screen_header" tools:ignore="ResourceName">Hello</string>
     <string name="country_list_header" tools:ignore="ResourceName">Popular Countries</string>
     <string name="country_list_header_accessibility" tools:ignore="ResourceName">Purchase a eSim for any of the following popular countries:</string>
+    <string name="purchase_button" tools:ignore="ResourceName">US$%.2f - BUY NOW</string>
+    <string name="purchase_button_accessibility" tools:ignore="ResourceName">Buy now for %.2f USD</string>
 </resources>

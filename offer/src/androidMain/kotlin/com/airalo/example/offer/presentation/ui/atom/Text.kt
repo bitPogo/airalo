@@ -14,7 +14,7 @@ import com.airalo.example.offer.presentation.ui.token.Font.overviewCountryName
 fun CountryName(content: String) {
     Text(
         content,
-        textAlign = TextAlign.Left,
+        textAlign = TextAlign.Start,
         style = overviewCountryName,
         modifier = Modifier
             .fillMaxSize(),
@@ -28,7 +28,7 @@ fun SectionTitle(
 ) {
     Text(
         content,
-        textAlign = TextAlign.Left,
+        textAlign = TextAlign.Start,
         style = Font.sectionTitle,
         modifier = Modifier
             .fillMaxSize()
@@ -42,7 +42,7 @@ fun SectionTitle(
 fun ScreenTitle(content: String) {
     Text(
         content,
-        textAlign = TextAlign.Left,
+        textAlign = TextAlign.Start,
         style = Font.screenTitle,
         modifier = Modifier.fillMaxSize(),
     )
@@ -55,7 +55,7 @@ fun OfferDetailLabel(
 ) {
     Text(
         content,
-        textAlign = TextAlign.Left,
+        textAlign = TextAlign.Start,
         style = Font.offerDetailLabel,
         modifier = Modifier
             .fillMaxSize()
@@ -72,7 +72,7 @@ fun OfferDetailValue(
 ) {
     Text(
         content,
-        textAlign = TextAlign.Left,
+        textAlign = TextAlign.Start,
         style = Font.offerDetailValue,
         modifier = Modifier
             .fillMaxSize()
@@ -83,14 +83,14 @@ fun OfferDetailValue(
 }
 
 @Composable
-fun OfferDetailButtonLabel(
+fun PurchaseButtonLabel(
     content: String,
     contentDescription: String,
 ) {
     Text(
         content,
-        textAlign = TextAlign.Left,
-        style = Font.offerDetailLabel,
+        textAlign = TextAlign.Start,
+        style = Font.offerButtonLabel,
         modifier = Modifier
             .fillMaxSize()
             .semantics {

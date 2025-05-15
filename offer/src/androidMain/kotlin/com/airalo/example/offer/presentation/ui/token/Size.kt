@@ -58,7 +58,21 @@ object Size {
             width = 335.dp,
             height = 84.dp,
         )
+        val purchaseButtonLabel = Dimension(
+            width = 122.dp, // +1 for border
+            height = 12.dp, // +1 for border
+        )
+        val purchaseButton = Dimension(
+            width = 259.dp,
+            height = 44.dp,
+        )
     }
 
     val surface = Surface
+
+    object Border {
+        val xs = 1.dp
+    }
+
+    val border = Border
 }

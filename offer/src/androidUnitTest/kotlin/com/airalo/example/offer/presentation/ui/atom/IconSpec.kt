@@ -42,7 +42,6 @@ class IconSpec : RoborazziTest() {
         ).assertDoesNotExist()
     }
 
-
     @Test
     fun `It renders a Validity Icon`() {
         subjectUnderTest.setContent {

@@ -46,6 +46,10 @@ object Size {
             width = 375.dp,
             height = 111.dp,
         )
+        val operatorLogo = Dimension(
+            width = 140.dp,
+            height = 88.dp,
+        )
     }
 
     val surface = Surface

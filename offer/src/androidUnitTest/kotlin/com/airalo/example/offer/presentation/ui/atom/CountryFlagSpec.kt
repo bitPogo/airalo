@@ -25,7 +25,7 @@ import org.robolectric.annotation.GraphicsMode
 @RunWith(AndroidJUnit4::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [33], application = TestApplication::class)
-class CountryItemSpecFlagSpec : RoborazziTest() {
+class CountryFlagSpec : RoborazziTest() {
     private val context = ApplicationProvider.getApplicationContext<Context>()
 
     @Before

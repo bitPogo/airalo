@@ -1,9 +1,9 @@
 package com.airalo.example.offer.domain.entity
 
 @JvmInline
-value class OperatorLogo(val url: String)
+value class OperatorLogoUrl(val url: String)
 
 data class Operator(
     val name: String,
-    val logo: OperatorLogo,
+    val logo: OperatorLogoUrl,
 )

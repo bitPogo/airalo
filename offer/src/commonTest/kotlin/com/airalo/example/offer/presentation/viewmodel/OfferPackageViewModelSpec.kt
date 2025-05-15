@@ -9,7 +9,7 @@ import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.domain.entity.Operator
-import com.airalo.example.offer.domain.entity.OperatorLogo
+import com.airalo.example.offer.domain.entity.OperatorLogoUrl
 import com.airalo.example.offer.domain.entity.Validity
 import com.airalo.example.offer.domain.entity.Volume
 import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
@@ -47,7 +47,7 @@ class OfferPackageViewModelSpec {
         Offer(
             operator = Operator(
                 name = dto.operator.title,
-                logo = OperatorLogo(dto.operator.image.url),
+                logo = OperatorLogoUrl(dto.operator.image.url),
             ),
             price = dto.price,
             validity = Validity(dto.validity),

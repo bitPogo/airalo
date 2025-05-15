@@ -66,6 +66,14 @@ object Size {
             width = 259.dp,
             height = 44.dp,
         )
+        val innerGoBackButton = Dimension(
+            width = 12.dp,
+            height = 21.dp,
+        )
+        val gobackButton = Dimension(
+            width = 44.dp,
+            height = 44.dp,
+        )
     }
 
     val surface = Surface

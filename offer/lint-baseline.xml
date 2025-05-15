@@ -20,6 +20,50 @@
     </issue>
 
     <issue
+        id="ResourceName"
+        message="Resource named &apos;`ic_back`&apos; does not start with the project&apos;s resource prefix &apos;`airalo_offer_`&apos;; rename to &apos;`airalo_offer_ic_back`&apos; ?"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~">
+        <location
+            file="src/androidMain/res/drawable/ic_back.xml"
+            line="1"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ResourceName"
+        message="Resource named &apos;`ic_data`&apos; does not start with the project&apos;s resource prefix &apos;`airalo_offer_`&apos;; rename to &apos;`airalo_offer_ic_data`&apos; ?"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~">
+        <location
+            file="src/androidMain/res/drawable/ic_data.xml"
+            line="1"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="ResourceName"
+        message="Resource named &apos;`ic_validity`&apos; does not start with the project&apos;s resource prefix &apos;`airalo_offer_`&apos;; rename to &apos;`airalo_offer_ic_validity`&apos; ?"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~">
+        <location
+            file="src/androidMain/res/drawable/ic_validity.xml"
+            line="1"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (834 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="      android:pathData=&quot;M11.701,0C11.917,0 12.092,0.175 12.092,0.39V3.707C12.092,3.923 11.917,4.098 11.701,4.098C11.486,4.098 11.311,3.923 11.311,3.707V0.39C11.311,0.175 11.486,0 11.701,0ZM4.287,0C4.502,0 4.677,0.175 4.677,0.39V3.707C4.677,3.923 4.502,4.098 4.287,4.098C4.071,4.098 3.896,3.923 3.896,3.707V0.39C3.896,0.175 4.071,0 4.287,0ZM14.433,1.171C15.3,1.171 16,1.87 16,2.738V6.244H0V2.738C0,1.87 0.7,1.171 1.567,1.171H2.732H3.506V2.835C3.267,3.05 3.116,3.361 3.116,3.707C3.116,4.354 3.64,4.878 4.287,4.878C4.933,4.878 5.457,4.354 5.457,3.707C5.457,3.361 5.306,3.05 5.067,2.835V1.171H10.927V2.829C10.684,3.044 10.531,3.358 10.531,3.707C10.531,4.354 11.055,4.878 11.701,4.878C12.348,4.878 12.872,4.354 12.872,3.707C12.872,3.364 12.723,3.056 12.488,2.841V1.171H14.433ZM16,7.024V14.433C16,15.3 15.3,16 14.433,16H1.567C0.7,16 0,15.3 0,14.433V7.024L16,7.024Z&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/androidMain/res/drawable/ic_validity.xml"
+            line="7"
+            column="25"/>
+    </issue>
+
+    <issue
         id="IconLocation"
         message="Found bitmap drawable `res/drawable/flag_of_flags.png` in densityless folder">
         <location

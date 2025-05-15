@@ -8,4 +8,5 @@ object Spacing {
     val m = 20.dp
     val s = 15.dp
     val xs = 12.dp
+    val xxxxs = 2.dp
 }

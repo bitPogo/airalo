@@ -8,3 +8,9 @@ import androidx.compose.ui.tooling.preview.Preview
 fun ScreenHeaderPreview() {
     ScreenHeader("Yes!")
 }
+
+@Preview(showBackground = true)
+@Composable
+fun ScreenHeaderWithActionPreview() {
+    ScreenHeader("Yes!") { }
+}

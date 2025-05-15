@@ -5,6 +5,7 @@ import com.airalo.example.offer.api.model.CountryDTO
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
+import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
 import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
 import com.goncalossilva.resources.Resource
@@ -56,5 +57,9 @@ class CountryOfferOverviewInteractorSpec {
         private val countries: List<Country>,
     ) : OfferRepositoryContract {
         override suspend fun listPopularCountries(): List<Country> = countries
+
+        override suspend fun fetchOffersForCountry(id: Id): List<Offer> {
+            TODO("Not yet implemented")
+        }
     }
 }

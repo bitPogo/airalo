@@ -81,9 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Offer'
+                $ref: '#/components/schemas/Offer'
         '404':
           description: "Missing entry"
           content:
@@ -169,6 +167,7 @@ components:
         - gradient_end
         - image
         - countries
+        - packages
 
     Package:
       type: object
@@ -203,6 +202,7 @@ components:
         - type
         - price
         - title
+        - data
         - validity
         - day
         - operator
@@ -214,6 +214,7 @@ components:
         - title
         - slug
         - image
+        - packages
       properties:
         id:
           type: string

@@ -43,4 +43,12 @@ class TextSpec : RoborazziTest() {
         // Assert
         subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
     }
+
+    @Test
+    fun `It renders a ScreenTitle`() {
+        // Act
+        subjectUnderTest.setContent {
+            ScreenTitle("Yes!")
+        }
+    }
 }

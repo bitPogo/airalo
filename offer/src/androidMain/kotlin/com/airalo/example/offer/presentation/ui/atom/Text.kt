@@ -35,3 +35,13 @@ fun SectionTitle(content: String, contentDescription: String) {
             }
     )
 }
+
+@Composable
+fun ScreenTitle(content: String) {
+    Text(
+        content,
+        textAlign = TextAlign.Left,
+        style = Font.screenTitle,
+        modifier = Modifier.fillMaxSize()
+    )
+}

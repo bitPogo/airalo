@@ -19,3 +19,11 @@ fun SectionTitlePreview() {
         SectionTitle("Yes!", contentDescription = "No!")
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun ScreenTitlePreview() {
+    Box {
+        SectionTitle("Yes!", contentDescription = "No!")
+    }
+}

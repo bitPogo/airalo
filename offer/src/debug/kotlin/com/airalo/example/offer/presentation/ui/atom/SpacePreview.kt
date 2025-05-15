@@ -13,9 +13,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SHorizontalSpacePreview() {
     Box(
-        modifier = Modifier.border(2.dp, Color.Black).height(20.dp)
+        modifier = Modifier.border(2.dp, Color.Black).height(20.dp),
     ) {
         SHorizontalSpace()
     }
 }
-

@@ -12,6 +12,6 @@ fun SHorizontalSpace() {
     Spacer(
         modifier = Modifier
             .fillMaxHeight()
-            .width(Spacing.s)
+            .width(Spacing.s),
     )
 }

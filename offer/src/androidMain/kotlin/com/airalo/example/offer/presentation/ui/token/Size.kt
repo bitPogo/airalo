@@ -22,6 +22,14 @@ object Size {
             width = 22.dp,
             height = 22.dp,
         )
+        val countryItem = Dimension(
+            width = 335.dp,
+            height = 55.dp,
+        )
+        val countryItemLabel = Dimension(
+            width = 221.dp,
+            height = 20.dp,
+        )
     }
 
     val surface = Surface

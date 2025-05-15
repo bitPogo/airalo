@@ -22,7 +22,7 @@ class SpaceSpec : RoborazziTest() {
     fun `It renders SHorizontalSpace`() {
         subjectUnderTest.setContent {
             Box(
-                modifier = Modifier.border(2.dp, Color.Black).height(20.dp)
+                modifier = Modifier.border(2.dp, Color.Black).height(20.dp),
             ) {
                 SHorizontalSpace()
             }

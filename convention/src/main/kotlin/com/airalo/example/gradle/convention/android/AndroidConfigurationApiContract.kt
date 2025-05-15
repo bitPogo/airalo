@@ -6,7 +6,7 @@ import org.gradle.api.JavaVersion
 // Taken from https://github.com/bitPogo/gradle-plugins/tree/main/antibytes-android-configuration
 interface AndroidConfigurationApiContract {
     companion object {
-        const val ANDROID_PREFIX = "thermondo"
+        const val ANDROID_PREFIX = "airalo"
         const val ANDROID_PREFIX_SEPARATOR = "_"
         val TARGET_SDK = BuildConfig.androidTargetSdk.toInt()
         val MIN_SDK = BuildConfig.androidMinSdk.toInt()

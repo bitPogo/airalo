@@ -30,6 +30,10 @@ object Size {
             width = 221.dp,
             height = 20.dp,
         )
+        val countryListHeader = Dimension(
+            width = 156.dp,
+            height = 75.dp,
+        )
     }
 
     val surface = Surface

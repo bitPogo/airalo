@@ -26,9 +26,7 @@ fun CountryOfferOverview(
         executor(LoadPopularOfferCountriesCommand)
     }
 
-    Column(
-        modifier = Modifier
-            .background(color = Color.lightGray),
+    Column(modifier = Modifier.background(color = Color.lightGray),
     ) {
         ScreenHeader(stringResource(R.string.country_offer_screen_header))
         CountryList(countries.value.countries)

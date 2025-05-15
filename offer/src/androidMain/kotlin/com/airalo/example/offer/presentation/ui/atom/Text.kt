@@ -1,12 +1,18 @@
 package com.airalo.example.offer.presentation.ui.atom
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.invisibleToUser
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import com.airalo.example.offer.presentation.ui.token.Color
 import com.airalo.example.offer.presentation.ui.token.Font
 import com.airalo.example.offer.presentation.ui.token.Font.overviewCountryName
 
@@ -22,7 +28,7 @@ fun CountryName(content: String) {
 @Composable
 fun SectionTitle(
     content: String,
-    contentDescription: String,
+    contentDescription: String?,
 ) {
     Text(
         content,
@@ -30,7 +36,11 @@ fun SectionTitle(
         style = Font.sectionTitle,
         modifier = Modifier
             .semantics {
-                this.contentDescription = contentDescription
+                if (contentDescription != null) {
+                    this.contentDescription = contentDescription
+                } else {
+                    this.invisibleToUser()
+                }
             },
     )
 }
@@ -44,9 +54,14 @@ fun ScreenTitle(
         content,
         textAlign = TextAlign.Start,
         style = Font.screenTitle,
-        modifier = Modifier.semantics {
+        modifier = Modifier
+            .semantics {
             contentDescription?.let {
-                this.contentDescription = contentDescription
+                if (contentDescription != null) {
+                    this.contentDescription = contentDescription
+                } else {
+                    this.invisibleToUser()
+                }
             }
         },
     )
@@ -60,7 +75,7 @@ fun OfferSubTitle(content: String) {
         style = Font.offerSubtitle,
         modifier = Modifier
             .semantics {
-                this.contentDescription = ""
+                this.invisibleToUser()
             },
     )
 }
@@ -68,7 +83,7 @@ fun OfferSubTitle(content: String) {
 @Composable
 fun OfferDetailLabel(
     content: String,
-    contentDescription: String,
+    contentDescription: String?,
 ) {
     Text(
         content,
@@ -76,7 +91,11 @@ fun OfferDetailLabel(
         style = Font.offerDetailLabel,
         modifier = Modifier
             .semantics {
-                this.contentDescription = contentDescription
+                if (contentDescription != null) {
+                    this.contentDescription = contentDescription
+                } else {
+                    this.invisibleToUser()
+                }
             },
     )
 }
@@ -84,7 +103,7 @@ fun OfferDetailLabel(
 @Composable
 fun OfferDetailValue(
     content: String,
-    contentDescription: String,
+    contentDescription: String?,
 ) {
     Text(
         content,
@@ -92,7 +111,11 @@ fun OfferDetailValue(
         style = Font.offerDetailValue,
         modifier = Modifier
             .semantics {
-                this.contentDescription = contentDescription
+                if (contentDescription != null) {
+                    this.contentDescription = contentDescription
+                } else {
+                    this.invisibleToUser()
+                }
             },
     )
 }
@@ -100,7 +123,7 @@ fun OfferDetailValue(
 @Composable
 fun PurchaseButtonLabel(
     content: String,
-    contentDescription: String,
+    contentDescription: String?,
 ) {
     Text(
         content,
@@ -109,7 +132,11 @@ fun PurchaseButtonLabel(
         modifier = Modifier
             .fillMaxSize()
             .semantics {
-                this.contentDescription = contentDescription
+                if (contentDescription != null) {
+                    this.contentDescription = contentDescription
+                } else {
+                    this.invisibleToUser()
+                }
             },
     )
 }

@@ -38,9 +38,15 @@ kotlin {
 
                 implementation(dependencyCatalog.jb.viewmodel)
                 implementation(compose.foundation)
-                implementation(compose.material3)
                 implementation(compose.ui)
-                implementation(compose.materialIconsExtended)
+
+                implementation(dependencyCatalog.koin.composeVM)
+
+                implementation(dependencyCatalog.ktor.contentNegotiation)
+                implementation(dependencyCatalog.ktor.serialization.json)
+                implementation(dependencyCatalog.ktor.serialization.core)
+                implementation(dependencyCatalog.ktor.logging)
+                implementation(dependencyCatalog.serialisation)
             }
         }
 
@@ -51,11 +57,15 @@ kotlin {
                 implementation(testDependencyCatalog.resources)
                 implementation(testDependencyCatalog.coroutine)
                 implementation(testDependencyCatalog.cashapp.turbine)
+                implementation(testDependencyCatalog.ktor.mockclient)
+                implementation(testDependencyCatalog.kfixture)
             }
         }
 
         androidMain {
             dependencies {
+                implementation(dependencyCatalog.ktor.cio)
+                implementation(compose.material3)
                 implementation(dependencyCatalog.bundles.coil)
             }
         }

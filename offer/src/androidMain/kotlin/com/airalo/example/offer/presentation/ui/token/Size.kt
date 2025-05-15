@@ -40,7 +40,7 @@ object Size {
         )
         val screenHeaderTitle = Dimension(
             width = 375.dp,
-            height = 32.dp,
+            height = 35.dp, // It needs 3 more pixel otherwise g is not correctly displayed
         )
         val screenHeader = Dimension(
             width = 375.dp,

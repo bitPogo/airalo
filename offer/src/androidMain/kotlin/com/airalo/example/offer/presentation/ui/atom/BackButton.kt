@@ -37,7 +37,7 @@ fun GoBackButton(action: Function0<Unit>) {
             painter = painterResource(R.drawable.ic_back),
             contentDescription = null,
             modifier = Modifier
-                .padding(start = Spacing.xxxxs)
+                .padding(start = Spacing.xxxs)
                 .width(Size.surface.innerGoBackButton.width)
                 .height(Size.surface.innerGoBackButton.height),
         )

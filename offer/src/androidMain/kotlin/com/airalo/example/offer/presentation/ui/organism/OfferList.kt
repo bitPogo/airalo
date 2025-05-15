@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.airalo.example.offer.domain.entity.Offer
+import com.airalo.example.offer.presentation.ui.atom.MVerticalSpace
 import com.airalo.example.offer.presentation.ui.atom.XLVerticalSpace
 import com.airalo.example.offer.presentation.ui.molecule.OfferPackage
 import com.airalo.example.offer.presentation.ui.token.Spacing
@@ -32,6 +33,7 @@ fun OfferList(offers: List<Offer>) {
 
             items(offers.size) { index ->
                 OfferPackage(offers[index])
+                MVerticalSpace()
             }
         }
     }

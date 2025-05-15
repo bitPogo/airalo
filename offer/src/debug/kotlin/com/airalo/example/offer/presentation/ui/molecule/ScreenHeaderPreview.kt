@@ -12,5 +12,5 @@ fun ScreenHeaderPreview() {
 @Preview(showBackground = true)
 @Composable
 fun ScreenHeaderWithActionPreview() {
-    ScreenHeader("Yes!") { }
+    ScreenHeader("Yesg!") { }
 }

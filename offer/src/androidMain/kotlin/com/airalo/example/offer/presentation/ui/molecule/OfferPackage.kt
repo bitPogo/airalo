@@ -50,7 +50,7 @@ private fun OperatorLabel(
         ) {
             SectionTitle(
                 operator.name,
-                "",
+                null,
             )
             OfferSubTitle(location)
         }

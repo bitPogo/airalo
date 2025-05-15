@@ -5,7 +5,9 @@ compose-ui = "1.7.8"
 compose-activity = "1.10.1"
 compose-material3 = "1.3.1"
 compose-fakemanifest = "1.7.8"
+compose-navigation = "2.7.7"
 coreKtx = "1.15.0"
+splashScreen = "1.0.1"
 lifecycleRuntimeKtx = "2.8.7"
 composeBom = "2025.05.00"
 ktor = "3.1.1"
@@ -29,11 +31,14 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-splashScreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashScreen" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "compose-navigation" }
 
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-ui" }
 compose-material = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 compose-fakemanifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose-fakemanifest" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
 
 coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 serialisation = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
@@ -68,7 +73,7 @@ cashapp-sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive
 jb-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jb-viewmodel" }
 
 [bundles]
-app-compose = ["compose-ui", "compose-material", "androidx-activity-compose"]
+app-compose = ["compose-ui", "compose-material", "androidx-activity-compose", "compose-navigation"]
 coil = ["coil-core", "coil-compose", "coil-network"]
 convention-compose = []
 convention-debug-compose = [ "compose-fakemanifest" ]

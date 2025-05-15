@@ -33,11 +33,11 @@ private fun ValueBox(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     DataIcon()
                     SHorizontalSpace()
-                    OfferDetailLabel(label, "")
+                    OfferDetailLabel(label, null)
                 }
             },
             right = {
-                OfferDetailValue(value, "")
+                OfferDetailValue(value, null)
             },
         )
     }

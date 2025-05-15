@@ -4,7 +4,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
+import com.airalo.example.offer.presentation.ui.token.Font
 import com.airalo.example.offer.presentation.ui.token.Font.overviewCountryName
 
 @Composable
@@ -15,5 +18,20 @@ fun CountryName(content: String) {
         style = overviewCountryName,
         modifier = Modifier
             .fillMaxSize(),
+    )
+}
+
+@Composable
+fun SectionTitle(content: String, contentDescription: String) {
+    Text(
+        content,
+        textAlign = TextAlign.Left,
+        style = Font.overviewSectionTitle,
+
+        modifier = Modifier
+            .fillMaxSize()
+            .semantics {
+                this.contentDescription = contentDescription
+            }
     )
 }

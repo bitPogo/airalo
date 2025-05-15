@@ -11,3 +11,11 @@ fun CountryNamePreview() {
         CountryName("Germany")
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun SectionTitlePreview() {
+    Box {
+        SectionTitle("Yes!", contentDescription = "No!")
+    }
+}

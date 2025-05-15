@@ -2,6 +2,8 @@ package com.airalo.example.offer.presentation.ui.atom
 
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.airalo.example.test.roborazzi.RoborazziTest
 import com.airalo.example.test.roborazzi.TestApplication
@@ -26,5 +28,19 @@ class TextSpec : RoborazziTest() {
                 contentDescription.isNotEmpty()
             },
         ).assertDoesNotExist()
+    }
+
+    @Test
+    fun `It renders a SectionTitle`() {
+        // Arrange
+        val contentDescription = "No"
+
+        // Act
+        subjectUnderTest.setContent {
+            SectionTitle("Yes!", contentDescription)
+        }
+
+        // Assert
+        subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
     }
 }

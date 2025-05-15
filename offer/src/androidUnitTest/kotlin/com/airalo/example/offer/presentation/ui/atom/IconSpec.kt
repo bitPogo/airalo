@@ -27,4 +27,33 @@ class IconSpec : RoborazziTest() {
             },
         ).assertDoesNotExist()
     }
+
+    @Test
+    fun `It renders a Data Icon`() {
+        subjectUnderTest.setContent {
+            DataIcon()
+        }
+
+        subjectUnderTest.onNode(
+            matcher = SemanticsMatcher("Empty ContentDescription") { node ->
+                val contentDescription = node.config.getOrElse(SemanticsProperties.ContentDescription) { emptyList() }
+                contentDescription.isNotEmpty()
+            },
+        ).assertDoesNotExist()
+    }
+
+
+    @Test
+    fun `It renders a Validity Icon`() {
+        subjectUnderTest.setContent {
+            ValidityIcon()
+        }
+
+        subjectUnderTest.onNode(
+            matcher = SemanticsMatcher("Empty ContentDescription") { node ->
+                val contentDescription = node.config.getOrElse(SemanticsProperties.ContentDescription) { emptyList() }
+                contentDescription.isNotEmpty()
+            },
+        ).assertDoesNotExist()
+    }
 }

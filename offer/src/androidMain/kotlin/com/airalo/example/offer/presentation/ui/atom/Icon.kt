@@ -9,6 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.airalo.example.offer.R
+import com.airalo.example.offer.domain.entity.Validity
+import com.airalo.example.offer.presentation.ui.token.Size
 import com.airalo.example.offer.presentation.ui.token.Size.Surface.icon
 import com.airalo.example.offer.presentation.ui.token.Size.Surface.trailingArrow
 
@@ -41,3 +43,26 @@ fun TrailingArrow() {
         )
     }
 }
+
+@Composable
+private fun StandardIcon(
+    resourceId: Int
+) {
+    Icon(Alignment.Center) {
+        Image(
+            painter = painterResource(resourceId),
+            contentDescription = null,
+            modifier = Modifier.width(
+                Size.surface.innerIcon.width,
+            ).height(
+                Size.surface.innerIcon.height,
+            ),
+        )
+    }
+}
+
+@Composable
+fun DataIcon() = StandardIcon(R.drawable.ic_data)
+
+@Composable
+fun ValidityIcon() = StandardIcon(R.drawable.ic_validity)

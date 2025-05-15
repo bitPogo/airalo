@@ -47,3 +47,5 @@ fun ScreenTitle(content: String) {
         modifier = Modifier.fillMaxSize(),
     )
 }
+
+

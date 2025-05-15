@@ -18,6 +18,10 @@ object Size {
             width = 7.dp,
             height = 12.dp,
         )
+        val innerIcon = Dimension(
+            width = 16.dp,
+            height = 16.dp,
+        )
         val icon = Dimension(
             width = 22.dp,
             height = 22.dp,

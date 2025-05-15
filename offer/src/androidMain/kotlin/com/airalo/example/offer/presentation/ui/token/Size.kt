@@ -34,6 +34,14 @@ object Size {
             width = 156.dp,
             height = 75.dp,
         )
+        val screenHeaderTitle = Dimension(
+            width = 375.dp,
+            height = 32.dp,
+        )
+        val screenHeader = Dimension(
+            width = 375.dp,
+            height = 111.dp,
+        )
     }
 
     val surface = Surface

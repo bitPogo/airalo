@@ -7,4 +7,6 @@
     <string name="go_back" tools:ignore="ResourceName">go back</string>
     <string name="data_label" tools:ignore="ResourceName">DATA</string>
     <string name="data_accessibility" tools:ignore="ResourceName">This package includes %s of data.</string>
+    <string name="validity_label" tools:ignore="ResourceName">VALIDITY</string>
+    <string name="validity_accessibility" tools:ignore="ResourceName">This package can be used for %s.</string>
 </resources>

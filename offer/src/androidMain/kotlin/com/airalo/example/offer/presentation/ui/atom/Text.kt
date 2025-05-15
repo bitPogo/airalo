@@ -16,8 +16,6 @@ fun CountryName(content: String) {
         content,
         textAlign = TextAlign.Start,
         style = overviewCountryName,
-        modifier = Modifier
-            .fillMaxSize(),
     )
 }
 
@@ -31,7 +29,6 @@ fun SectionTitle(
         textAlign = TextAlign.Start,
         style = Font.sectionTitle,
         modifier = Modifier
-            .fillMaxSize()
             .semantics {
                 this.contentDescription = contentDescription
             },
@@ -44,7 +41,6 @@ fun ScreenTitle(content: String) {
         content,
         textAlign = TextAlign.Start,
         style = Font.screenTitle,
-        modifier = Modifier.fillMaxSize(),
     )
 }
 
@@ -58,7 +54,6 @@ fun OfferDetailLabel(
         textAlign = TextAlign.Start,
         style = Font.offerDetailLabel,
         modifier = Modifier
-            .fillMaxSize()
             .semantics {
                 this.contentDescription = contentDescription
             },
@@ -72,10 +67,9 @@ fun OfferDetailValue(
 ) {
     Text(
         content,
-        textAlign = TextAlign.Start,
+        textAlign = TextAlign.Unspecified,
         style = Font.offerDetailValue,
         modifier = Modifier
-            .fillMaxSize()
             .semantics {
                 this.contentDescription = contentDescription
             },

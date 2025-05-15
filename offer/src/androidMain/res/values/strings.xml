@@ -5,4 +5,6 @@
     <string name="purchase_button" tools:ignore="ResourceName">US$%.2f - BUY NOW</string>
     <string name="purchase_button_accessibility" tools:ignore="ResourceName">Buy now for %.2f USD</string>
     <string name="go_back" tools:ignore="ResourceName">go back</string>
+    <string name="data_label" tools:ignore="ResourceName">DATA</string>
+    <string name="data_accessibility" tools:ignore="ResourceName">This package includes %s of data.</string>
 </resources>

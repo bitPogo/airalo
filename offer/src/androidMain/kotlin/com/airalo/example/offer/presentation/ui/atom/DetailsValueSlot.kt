@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,7 +27,19 @@ fun OfferDetailsValueSlot(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(contentAlignment = Alignment.CenterStart, content = left)
-        Box(contentAlignment = Alignment.CenterEnd, content = right)
+        Box(
+            contentAlignment = Alignment.CenterStart,
+            modifier = Modifier
+                .height(Size.surface.detailInnerLabelValue.height)
+                .width(Size.surface.detailInnerLabelValue.width),
+            content = left,
+        )
+        Box(
+            contentAlignment = Alignment.CenterEnd,
+            modifier = Modifier
+                .height(Size.surface.detailInnerLabelValue.height)
+                .width(Size.surface.detailInnerLabelValue.width),
+            content = right,
+        )
     }
 }

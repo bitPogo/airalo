@@ -1,10 +1,8 @@
 package com.airalo.example.offer.domain.interactor
 
 import app.cash.turbine.test
-import com.airalo.example.offer.api.model.CountryDTO
 import com.airalo.example.offer.api.model.OfferDTO
 import com.airalo.example.offer.domain.entity.Country
-import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.domain.entity.Operator
@@ -15,7 +13,6 @@ import com.airalo.example.offer.domain.repository.OfferRepositoryContract
 import com.airalo.example.offer.presentation.interactor.OfferPackageInteractorContract
 import com.goncalossilva.resources.Resource
 import kotlinx.coroutines.test.runTest
-import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import org.junit.Test
 import tech.antibytes.util.test.fulfils
@@ -40,7 +37,6 @@ class OfferPackageInteractorSpec {
         )
     }
 
-
     @Test
     fun `When loadOffersForCountry is called Then it propagates the offers provided by the OfferRepository`() =
         runTest {
@@ -59,19 +55,18 @@ class OfferPackageInteractorSpec {
             }
         }
 
-
-
     @Test
     fun `It fulfils the OfferPackageInteractorContract`() {
         OfferInteractor(FakeOfferRepository(emptyList())) fulfils OfferPackageInteractorContract::class
     }
 
     private class FakeOfferRepository(
-        private val offers: List<Offer>
+        private val offers: List<Offer>,
     ) : OfferRepositoryContract {
         private var _id: Id? = null
         val id: Id
             get() = _id!!
+
         override suspend fun listPopularCountries(): List<Country> = TODO("Not yet implemented")
 
         override suspend fun fetchOffersForCountry(id: Id): List<Offer> = offers.also { _id = id }

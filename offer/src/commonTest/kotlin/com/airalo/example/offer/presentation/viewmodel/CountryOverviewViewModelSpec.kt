@@ -8,7 +8,9 @@ import com.airalo.example.offer.api.model.CountryDTO
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
+import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.presentation.interactor.CountryOfferOverviewInteractorContract
+import com.airalo.example.offer.presentation.interactor.OfferPackageInteractorContract
 import com.airalo.example.offer.presentation.model.CountryOfferOverviewStateHolder
 import com.airalo.example.offer.presentation.model.CountryOverviewUiState
 import com.airalo.example.offer.presentation.ui.command.LoadPopularOfferCountriesCommand
@@ -31,6 +33,7 @@ import org.junit.jupiter.api.BeforeEach
 import tech.antibytes.util.test.fulfils
 import tech.antibytes.util.test.mustBe
 
+@ExperimentalCoroutinesApi
 class CountryOverviewViewModelSpec {
     private val serializedCountries = Resource("src/commonTest/resources/Countries.json").readText()
     private val countries = Json {
@@ -63,7 +66,7 @@ class CountryOverviewViewModelSpec {
     fun `When the LoadPopularCountriesCommand is executed Then it propagates Success if there are countries`() =
         runTest {
             // Arrange
-            val viewModel = CountryOverviewViewModel(InteractorFake(mutableListOf(countries)))
+            val viewModel = OfferViewModel(InteractorFake(mutableListOf(countries)), DummyOfferInteractor)
             viewModel.countries.test {
                 // Act
                 viewModel(LoadPopularOfferCountriesCommand)
@@ -80,7 +83,7 @@ class CountryOverviewViewModelSpec {
     fun `When the LoadPopularCountriesCommand is executed Then it propagates an Error if there are no countries`() =
         runTest {
             // Arrange
-            val viewModel = CountryOverviewViewModel(InteractorFake(mutableListOf(emptyList())))
+            val viewModel = OfferViewModel(InteractorFake(mutableListOf(emptyList())), DummyOfferInteractor)
             viewModel.countries.test {
                 // Act
                 viewModel(LoadPopularOfferCountriesCommand)
@@ -97,13 +100,14 @@ class CountryOverviewViewModelSpec {
     fun `Given Countries had been successful resolved When the LoadPopularCountriesCommand is executed Then it propagates an Error while keeping the previous result if no countries had been propagated`() =
         runTest {
             // Arrange
-            val viewModel = CountryOverviewViewModel(
+            val viewModel = OfferViewModel(
                 InteractorFake(
                     mutableListOf(
                         countries,
                         emptyList(),
                     ),
                 ),
+                DummyOfferInteractor,
             )
             viewModel.countries.test {
                 // Act
@@ -127,12 +131,12 @@ class CountryOverviewViewModelSpec {
 
     @Test
     fun `It fulfils the CountryOfferOverviewStateHolder`() {
-        CountryOverviewViewModel(InteractorFake()) fulfils CountryOfferOverviewStateHolder::class
+        OfferViewModel(InteractorFake(), DummyOfferInteractor) fulfils CountryOfferOverviewStateHolder::class
     }
 
     @Test
     fun `It fulfils ViewModel`() {
-        CountryOverviewViewModel(InteractorFake()) fulfils ViewModel::class
+        OfferViewModel(InteractorFake(), DummyOfferInteractor) fulfils ViewModel::class
     }
 
     private class InteractorFake(
@@ -144,5 +148,11 @@ class CountryOverviewViewModelSpec {
         override suspend fun listPopularCountries() {
             _toPropagate.emit(_countries.removeAt(0))
         }
+    }
+
+    private object DummyOfferInteractor : OfferPackageInteractorContract {
+        override val offers: SharedFlow<List<Offer>> = MutableSharedFlow<List<Offer>>().asSharedFlow()
+
+        override suspend fun loadOffersForCountry(countryId: Id) = TODO("Not yet implemented")
     }
 }

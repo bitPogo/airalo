@@ -22,17 +22,19 @@ fun CountryName(content: String) {
 }
 
 @Composable
-fun SectionTitle(content: String, contentDescription: String) {
+fun SectionTitle(
+    content: String,
+    contentDescription: String,
+) {
     Text(
         content,
         textAlign = TextAlign.Left,
         style = Font.overviewSectionTitle,
-
         modifier = Modifier
             .fillMaxSize()
             .semantics {
                 this.contentDescription = contentDescription
-            }
+            },
     )
 }
 
@@ -42,6 +44,6 @@ fun ScreenTitle(content: String) {
         content,
         textAlign = TextAlign.Left,
         style = Font.screenTitle,
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
     )
 }

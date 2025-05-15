@@ -21,11 +21,11 @@ fun ScreenHeader(screenTitle: String) {
             .height(Size.Surface.screenHeader.height)
             .padding(bottom = Spacing.m, start = Spacing.m)
             .background(color = Color.white),
-        contentAlignment = Alignment.BottomStart
+        contentAlignment = Alignment.BottomStart,
     ) {
         Box(
             modifier = Modifier
-                .height(Size.Surface.screenHeaderTitle.height)
+                .height(Size.Surface.screenHeaderTitle.height),
         ) {
             ScreenTitle(screenTitle)
         }

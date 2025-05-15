@@ -18,13 +18,13 @@ fun CountryListHeader() {
         modifier = Modifier
             .fillMaxWidth()
             .height(
-                Size.surface.countryListHeader.height
+                Size.surface.countryListHeader.height,
             )
-            .padding(bottom = Spacing.m)
+            .padding(bottom = Spacing.m),
     ) {
         SectionTitle(
             content = stringResource(R.string.country_list_header),
-            contentDescription = stringResource(R.string.country_list_header_accessibility)
+            contentDescription = stringResource(R.string.country_list_header_accessibility),
         )
     }
 }

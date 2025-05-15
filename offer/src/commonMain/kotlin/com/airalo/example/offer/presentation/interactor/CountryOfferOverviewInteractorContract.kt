@@ -14,7 +14,7 @@ interface CountryOfferOverviewInteractorContract {
     val countries: SharedFlow<List<Country>>
 
     /**
-     * Propagates the list of popular countries through [countries].
+     * Propagates a list of popular countries through [countries].
      */
     suspend fun listPopularCountries()
 }

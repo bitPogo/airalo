@@ -32,7 +32,7 @@ object Size {
         )
         val countryListHeader = Dimension(
             width = 156.dp,
-            height = 75.dp,
+            height = 22.dp,
         )
         val screenHeaderTitle = Dimension(
             width = 375.dp,

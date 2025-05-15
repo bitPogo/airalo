@@ -29,3 +29,23 @@ fun XSVerticalSpacePreview() {
         XSVerticalSpace()
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun MVerticalSpacePreview() {
+    Box(
+        modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+    ) {
+        MVerticalSpace()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun XLVerticalSpacePreview() {
+    Box(
+        modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+    ) {
+        XLVerticalSpace()
+    }
+}

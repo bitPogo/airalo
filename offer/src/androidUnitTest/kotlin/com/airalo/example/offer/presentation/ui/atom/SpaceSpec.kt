@@ -40,4 +40,26 @@ class SpaceSpec : RoborazziTest() {
             }
         }
     }
+
+    @Test
+    fun `It renders MVerticalSpace`() {
+        subjectUnderTest.setContent {
+            Box(
+                modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+            ) {
+                MVerticalSpace()
+            }
+        }
+    }
+
+    @Test
+    fun `It renders XLVerticalSpace`() {
+        subjectUnderTest.setContent {
+            Box(
+                modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+            ) {
+                XLVerticalSpace()
+            }
+        }
+    }
 }

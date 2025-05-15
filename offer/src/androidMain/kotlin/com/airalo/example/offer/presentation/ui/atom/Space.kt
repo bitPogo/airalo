@@ -26,3 +26,21 @@ fun XSVerticalSpace() {
             .height(Spacing.xs),
     )
 }
+
+@Composable
+fun MVerticalSpace() {
+    Spacer(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(Spacing.m),
+    )
+}
+
+@Composable
+fun XLVerticalSpace() {
+    Spacer(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(Spacing.xl),
+    )
+}

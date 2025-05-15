@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="country_offer_screen_header" tools:ignore="ResourceName">Hello</string>
     <string name="country_list_header" tools:ignore="ResourceName">Popular Countries</string>
     <string name="country_list_header_accessibility" tools:ignore="ResourceName">Purchase a eSim for any of the following popular countries:</string>
 </resources>

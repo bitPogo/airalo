@@ -19,12 +19,12 @@ fun ScreenHeader(screenTitle: String) {
         modifier = Modifier
             .fillMaxWidth()
             .height(Size.Surface.screenHeader.height)
-            .padding(bottom = Spacing.m, start = Spacing.m)
             .background(color = Color.white),
         contentAlignment = Alignment.BottomStart,
     ) {
         Box(
             modifier = Modifier
+                .padding(bottom = Spacing.m, start = Spacing.m)
                 .height(Size.Surface.screenHeaderTitle.height),
         ) {
             ScreenTitle(screenTitle)

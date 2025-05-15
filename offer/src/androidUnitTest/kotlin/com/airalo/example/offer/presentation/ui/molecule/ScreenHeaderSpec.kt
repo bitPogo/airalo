@@ -1,5 +1,6 @@
 package com.airalo.example.offer.presentation.ui.molecule
 
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.performClick
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -38,5 +39,19 @@ class ScreenHeaderSpec : RoborazziTest() {
 
         // Assert
         wasCalled mustBe true
+    }
+
+    @Test
+    fun `It renders a ScreenHeader with ContentDescription`() {
+        // Arrange
+        val contentDescription = "No"
+
+        // Act
+        subjectUnderTest.setContent {
+            ScreenHeader("Yes!", contentDescription)
+        }
+
+        // Assert
+        subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
     }
 }

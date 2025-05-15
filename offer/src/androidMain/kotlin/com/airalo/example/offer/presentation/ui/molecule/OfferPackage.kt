@@ -12,7 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.zIndex
+import com.airalo.example.offer.R
 import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.domain.entity.Operator
 import com.airalo.example.offer.presentation.ui.atom.OfferDetailActionSlot
@@ -31,13 +35,22 @@ private fun OperatorLabel(
     operator: Operator,
     location: String,
 ) {
+    val accessibilityLabel = stringResource(
+        R.string.offer_section_title_accessibility,
+        operator.name,
+    )
+
     OfferDetailActionSlot {
         Column(
-            modifier = Modifier.padding(Spacing.m),
+            modifier = Modifier
+                .padding(Spacing.m)
+                .semantics {
+                    this.contentDescription = accessibilityLabel
+                },
         ) {
             SectionTitle(
                 operator.name,
-                operator.name,
+                "",
             )
             OfferSubTitle(location)
         }

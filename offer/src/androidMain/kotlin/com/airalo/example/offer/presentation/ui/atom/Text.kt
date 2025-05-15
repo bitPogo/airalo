@@ -36,11 +36,19 @@ fun SectionTitle(
 }
 
 @Composable
-fun ScreenTitle(content: String) {
+fun ScreenTitle(
+    content: String,
+    contentDescription: String? = null,
+) {
     Text(
         content,
         textAlign = TextAlign.Start,
         style = Font.screenTitle,
+        modifier = Modifier.semantics {
+            contentDescription?.let {
+                this.contentDescription = contentDescription
+            }
+        },
     )
 }
 

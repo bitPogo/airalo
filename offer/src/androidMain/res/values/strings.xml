@@ -4,9 +4,11 @@
     <string name="country_list_header_accessibility" tools:ignore="ResourceName">Purchase a eSim for any of the following popular countries:</string>
     <string name="purchase_button" tools:ignore="ResourceName">US$%.2f - BUY NOW</string>
     <string name="purchase_button_accessibility" tools:ignore="ResourceName">Buy now for %.2f USD</string>
+    <string name="offer_screen_title_accessibility" tools:ignore="ResourceName">You can purchase here eSim for %s.</string>
     <string name="go_back" tools:ignore="ResourceName">go back</string>
     <string name="data_label" tools:ignore="ResourceName">DATA</string>
     <string name="data_accessibility" tools:ignore="ResourceName">This package includes %s of data.</string>
     <string name="validity_label" tools:ignore="ResourceName">VALIDITY</string>
     <string name="validity_accessibility" tools:ignore="ResourceName">This package can be used for %s.</string>
+    <string name="offer_section_title_accessibility" tools:ignore="ResourceName">%s is the operator for the following offer.</string>
 </resources>

@@ -47,3 +47,54 @@ fun ScreenTitle(content: String) {
         modifier = Modifier.fillMaxSize(),
     )
 }
+
+@Composable
+fun OfferDetailLabel(
+    content: String,
+    contentDescription: String,
+) {
+    Text(
+        content,
+        textAlign = TextAlign.Left,
+        style = Font.offerDetailLabel,
+        modifier = Modifier
+            .fillMaxSize()
+            .semantics {
+                this.contentDescription = contentDescription
+            },
+    )
+}
+
+@Composable
+fun OfferDetailValue(
+    content: String,
+    contentDescription: String,
+) {
+    Text(
+        content,
+        textAlign = TextAlign.Left,
+        style = Font.offerDetailValue,
+        modifier = Modifier
+            .fillMaxSize()
+            .semantics {
+                this.contentDescription = contentDescription
+            },
+    )
+}
+
+@Composable
+fun OfferDetailButtonLabel(
+    content: String,
+    contentDescription: String,
+) {
+    Text(
+        content,
+        textAlign = TextAlign.Left,
+        style = Font.offerDetailLabel,
+        modifier = Modifier
+            .fillMaxSize()
+            .semantics {
+                this.contentDescription = contentDescription
+            },
+    )
+}

@@ -50,6 +50,10 @@ object Size {
             width = 140.dp,
             height = 88.dp,
         )
+        val detailLabelValue = Dimension(
+            width = 335.dp,
+            height = 58.dp,
+        )
     }
 
     val surface = Surface

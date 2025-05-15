@@ -14,6 +14,30 @@ fun CountryNamePreview() {
 
 @Preview(showBackground = true)
 @Composable
+fun OfferDetailLabelPreview() {
+    Box {
+        OfferDetailLabel("Yes!", contentDescription = "No!")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun OfferDetailValuePreview() {
+    Box {
+        OfferDetailValue("Yes!", contentDescription = "No!")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun OfferDetailButtonLabelPreview() {
+    Box {
+        OfferDetailButtonLabel("Yes!", contentDescription = "No!")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
 fun SectionTitlePreview() {
     Box {
         SectionTitle("Yes!", contentDescription = "No!")

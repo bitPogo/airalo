@@ -31,6 +31,48 @@ class TextSpec : RoborazziTest() {
     }
 
     @Test
+    fun `It renders an OfferDetailLabel`() {
+        // Arrange
+        val contentDescription = "No"
+
+        // Act
+        subjectUnderTest.setContent {
+            OfferDetailLabel("Yes!", contentDescription)
+        }
+
+        // Assert
+        subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
+    }
+
+    @Test
+    fun `It renders an OfferDetailValue`() {
+        // Arrange
+        val contentDescription = "No"
+
+        // Act
+        subjectUnderTest.setContent {
+            OfferDetailValue("Yes!", contentDescription)
+        }
+
+        // Assert
+        subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
+    }
+
+    @Test
+    fun `It renders an OfferDetailButtonLabel`() {
+        // Arrange
+        val contentDescription = "No"
+
+        // Act
+        subjectUnderTest.setContent {
+            OfferDetailButtonLabel("Yes!", contentDescription)
+        }
+
+        // Assert
+        subjectUnderTest.onNodeWithContentDescription(contentDescription).assertIsDisplayed()
+    }
+
+    @Test
     fun `It renders a SectionTitle`() {
         // Arrange
         val contentDescription = "No"

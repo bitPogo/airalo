@@ -31,6 +31,15 @@ object Font {
         color = Color.charcoalGray,
     )
 
+    val offerSubtitle = TextStyle(
+        fontFamily = IbmPlexSans,
+        fontWeight = FontWeight.Medium,
+        fontSize = 13.sp,
+        lineHeight = 15.sp,
+        letterSpacing = 0.sp,
+        color = Color.charcoalGray,
+    )
+
     val overviewCountryName = TextStyle(
         fontFamily = IbmPlexSans,
         fontWeight = FontWeight.Medium,

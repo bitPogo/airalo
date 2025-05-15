@@ -183,7 +183,7 @@ components:
           description: The type of package (e.g., sim).
         price:
           type: number
-          format: float
+          format: double
           description: The price of the package.
         title:
           type: string

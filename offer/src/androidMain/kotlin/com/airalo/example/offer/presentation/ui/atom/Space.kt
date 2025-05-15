@@ -44,3 +44,12 @@ fun XLVerticalSpace() {
             .height(Spacing.xl),
     )
 }
+
+@Composable
+fun XXLVerticalSpace() {
+    Spacer(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(Spacing.xxl),
+    )
+}

@@ -87,6 +87,22 @@ class TextSpec : RoborazziTest() {
     }
 
     @Test
+    fun `It renders a OfferSubTitle`() {
+        // Act
+        subjectUnderTest.setContent {
+            OfferSubTitle("Yes!")
+        }
+
+        // Assert
+        subjectUnderTest.onNode(
+            matcher = SemanticsMatcher("Empty ContentDescription") { node ->
+                val contentDescription = node.config.getOrElse(SemanticsProperties.ContentDescription) { emptyList() }
+                contentDescription.firstOrNull()?.isNotEmpty() ?: false
+            },
+        ).assertDoesNotExist()
+    }
+
+    @Test
     fun `It renders a ScreenTitle`() {
         // Act
         subjectUnderTest.setContent {

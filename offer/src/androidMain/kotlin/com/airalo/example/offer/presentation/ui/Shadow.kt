@@ -8,8 +8,8 @@ import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import com.airalo.example.offer.presentation.ui.token.Color
 import com.airalo.example.offer.presentation.ui.token.Offset
 
-internal fun Modifier.shadow() {
-    drawBehind {
+internal fun Modifier.shadow(): Modifier {
+    return drawBehind {
         drawIntoCanvas { canvas ->
             val paint = Paint()
             val frameworkPaint = paint.asFrameworkPaint()

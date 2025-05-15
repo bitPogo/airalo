@@ -62,4 +62,15 @@ class SpaceSpec : RoborazziTest() {
             }
         }
     }
+
+    @Test
+    fun `It renders XXLVerticalSpace`() {
+        subjectUnderTest.setContent {
+            Box(
+                modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+            ) {
+                XXLVerticalSpace()
+            }
+        }
+    }
 }

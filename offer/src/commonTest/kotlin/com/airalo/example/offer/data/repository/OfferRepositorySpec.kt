@@ -152,15 +152,17 @@ class OfferRepositorySpec {
             offers.size mustBe this@OfferRepositorySpec.offers.packages.size
             offers.first().operator.name mustBe this@OfferRepositorySpec.offers.packages.first().operator.title
             offers.first().operator.logo.url mustBe this@OfferRepositorySpec.offers.packages.first().operator.image.url
-            offers.first().price mustBe this@OfferRepositorySpec.offers.packages.first().price
+            offers.first().price.price mustBe this@OfferRepositorySpec.offers.packages.first().price
             offers.first().validity.validity mustBe this@OfferRepositorySpec.offers.packages.first().validity
             offers.first().volume.volume mustBe this@OfferRepositorySpec.offers.packages.first().data
+            offers.first().location mustBe this@OfferRepositorySpec.offers.title
 
             offers.last().operator.name mustBe this@OfferRepositorySpec.offers.packages.last().operator.title
             offers.last().operator.logo.url mustBe this@OfferRepositorySpec.offers.packages.last().operator.image.url
-            offers.last().price mustBe this@OfferRepositorySpec.offers.packages.last().price
+            offers.last().price.price mustBe this@OfferRepositorySpec.offers.packages.last().price
             offers.last().validity.validity mustBe this@OfferRepositorySpec.offers.packages.last().validity
             offers.last().volume.volume mustBe this@OfferRepositorySpec.offers.packages.last().data
+            offers.last().location mustBe this@OfferRepositorySpec.offers.title
         }
 
     @Test

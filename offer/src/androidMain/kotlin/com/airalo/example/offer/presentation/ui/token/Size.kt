@@ -78,6 +78,14 @@ object Size {
             width = 44.dp,
             height = 44.dp,
         )
+        val offerPackage = Dimension(
+            height = 308.dp,
+            width = 335.dp,
+        )
+        val offerPackageCard = Dimension(
+            height = 288.dp,
+            width = 335.dp,
+        )
     }
 
     val surface = Surface

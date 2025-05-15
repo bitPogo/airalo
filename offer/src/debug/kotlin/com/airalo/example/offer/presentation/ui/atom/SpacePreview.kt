@@ -49,3 +49,13 @@ fun XLVerticalSpacePreview() {
         XLVerticalSpace()
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun XXLVerticalSpacePreview() {
+    Box(
+        modifier = Modifier.border(2.dp, Color.Black).width(20.dp),
+    ) {
+        XXLVerticalSpace()
+    }
+}

@@ -11,8 +11,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.presentation.ui.atom.MVerticalSpace
-import com.airalo.example.offer.presentation.ui.atom.XLVerticalSpace
 import com.airalo.example.offer.presentation.ui.atom.XSVerticalSpace
+import com.airalo.example.offer.presentation.ui.atom.XXLVerticalSpace
 import com.airalo.example.offer.presentation.ui.molecule.CountryItem
 import com.airalo.example.offer.presentation.ui.molecule.CountryListHeader
 import com.airalo.example.offer.presentation.ui.token.Spacing
@@ -32,7 +32,7 @@ fun CountryList(countries: List<Country>) {
             ),
         ) {
             item {
-                XLVerticalSpace()
+                XXLVerticalSpace()
                 CountryListHeader()
                 MVerticalSpace()
             }

@@ -10,6 +10,7 @@ import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.domain.entity.Operator
 import com.airalo.example.offer.domain.entity.OperatorLogoUrl
+import com.airalo.example.offer.domain.entity.Price
 import com.airalo.example.offer.domain.entity.Validity
 import com.airalo.example.offer.domain.entity.Volume
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
@@ -42,9 +43,10 @@ internal class OfferRepository(
                     name = dto.operator.title,
                     logo = OperatorLogoUrl(dto.operator.image.url),
                 ),
-                price = dto.price,
+                price = Price(dto.price),
                 validity = Validity(dto.validity),
                 volume = Volume(dto.data),
+                location = this.title,
             )
         }
     }

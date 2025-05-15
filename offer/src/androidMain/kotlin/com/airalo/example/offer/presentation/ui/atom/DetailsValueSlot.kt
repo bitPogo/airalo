@@ -21,7 +21,7 @@ fun OfferDetailsValueSlot(
 ) {
     Row(
         modifier = Modifier
-            .padding(Spacing.m)
+            .padding(start = Spacing.m, end = Spacing.m)
             .height(Size.surface.detailLabelValue.height)
             .fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,

@@ -45,6 +45,19 @@ fun ScreenTitle(content: String) {
 }
 
 @Composable
+fun OfferSubTitle(content: String) {
+    Text(
+        content,
+        textAlign = TextAlign.Start,
+        style = Font.offerSubtitle,
+        modifier = Modifier
+            .semantics {
+                this.contentDescription = ""
+            },
+    )
+}
+
+@Composable
 fun OfferDetailLabel(
     content: String,
     contentDescription: String,

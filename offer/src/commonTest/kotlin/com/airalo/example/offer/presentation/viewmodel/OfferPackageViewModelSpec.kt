@@ -147,8 +147,8 @@ class OfferPackageViewModelSpec {
                 advanceUntilIdle()
 
                 // Assert
-                awaitItem() mustBe OfferPackageUiState.Loading(offers)
-                awaitItem() mustBe OfferPackageUiState.Error(offers)
+                awaitItem() mustBe OfferPackageUiState.Loading(emptyList())
+                awaitItem() mustBe OfferPackageUiState.Error(emptyList())
                 interactor.id mustBe countryId
             }
         }

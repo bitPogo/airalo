@@ -93,7 +93,7 @@ class OfferViewModel(
     }
 
     override fun loadOffersForCountry(countryId: Id) {
-        _offers.update { OfferPackageUiState.Loading(offers.value.offers) }
+        _offers.update { OfferPackageUiState.Loading(emptyList()) }
         viewModelScope.launch {
             offerPackageInteractor.loadOffersForCountry(countryId)
         }

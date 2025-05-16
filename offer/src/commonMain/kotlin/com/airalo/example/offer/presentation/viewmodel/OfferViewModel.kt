@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-internal class OfferViewModel(
+class OfferViewModel(
     private val countryInteractor: CountryOfferOverviewInteractorContract,
     private val offerPackageInteractor: OfferPackageInteractorContract,
 ) :

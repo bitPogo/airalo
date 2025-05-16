@@ -59,6 +59,9 @@ kotlin {
                 implementation(testDependencyCatalog.cashapp.turbine)
                 implementation(testDependencyCatalog.ktor.mockclient)
                 implementation(testDependencyCatalog.kfixture)
+
+                // / REMOVE
+                implementation(testDependencyCatalog.mockk.core)
             }
         }
 

@@ -1,6 +1,5 @@
 package com.airalo.example.offer.di
 
-import com.airalo.example.offer.data.client.di.resolveClientKoin
 import com.airalo.example.offer.presentation.viewmodel.OfferViewModel
 import kotlin.test.Test
 import kotlin.test.assertNotNull

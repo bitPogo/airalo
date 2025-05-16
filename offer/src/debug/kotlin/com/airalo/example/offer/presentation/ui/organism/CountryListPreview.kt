@@ -2,6 +2,7 @@ package com.airalo.example.offer.presentation.ui.organism
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
@@ -62,5 +63,7 @@ fun CountryListPreview() {
         ),
     )
 
-    CountryList(countries)
+    val navController = rememberNavController()
+
+    CountryList(countries, navController) {}
 }

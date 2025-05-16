@@ -22,6 +22,6 @@ fun CountryPreview() {
                 name = "Germany",
                 flag = CountryFlagUri("https://cdn.airalo.com/images/473ba88c-547f-447e-970a-d52ba3748077.png"),
             ),
-        )
+        ) { println("Clicked") }
     }
 }

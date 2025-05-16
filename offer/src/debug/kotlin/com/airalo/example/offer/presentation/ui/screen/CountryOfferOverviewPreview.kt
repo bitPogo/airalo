@@ -5,6 +5,7 @@ package com.airalo.example.offer.presentation.ui.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
+import androidx.navigation.compose.rememberNavController
 import com.airalo.example.command.Command
 import com.airalo.example.offer.domain.entity.Country
 import com.airalo.example.offer.domain.entity.CountryFlagUri
@@ -76,8 +77,9 @@ fun CountryOfferOverviewPreview() {
     )
 
     val viewModel = FakeOfferPreviewViewModel(countries)
+    val router = rememberNavController()
 
-    CountryOfferOverview(viewModel, viewModel)
+    CountryOfferOverview(viewModel, router, viewModel)
 }
 
 private class FakeOfferPreviewViewModel(

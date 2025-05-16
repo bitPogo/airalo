@@ -14,28 +14,28 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.binds
 import org.koin.dsl.module
 
+fun resolveOfferKoin() =
+    module {
+        includes(resolveClientKoin())
 
-fun resolveOfferKoin() = module {
-    includes(resolveClientKoin())
+        single {
+            OffersInCountryApi(
+                baseUrl = get(qualifier = named("BaseUrl")),
+                httpClient = get(),
+            )
+        }
+        single {
+            CountriesApi(
+                baseUrl = get(qualifier = named("BaseUrl")),
+                httpClient = get(),
+            )
+        }
 
-    single {
-        OffersInCountryApi(
-            baseUrl = get(qualifier = named("BaseUrl")),
-            httpClient = get()
+        factory<OfferRepositoryContract> { OfferRepository(get(), get()) }
+        factory { OfferInteractor(get()) } binds arrayOf(
+            CountryOfferOverviewInteractorContract::class,
+            OfferPackageInteractorContract::class,
         )
-    }
-    single {
-        CountriesApi(
-            baseUrl = get(qualifier = named("BaseUrl")),
-            httpClient = get()
-        )
-    }
 
-    factory<OfferRepositoryContract> { OfferRepository(get(), get()) }
-    factory { OfferInteractor(get()) } binds arrayOf(
-        CountryOfferOverviewInteractorContract::class,
-        OfferPackageInteractorContract::class
-    )
-
-    viewModel { OfferViewModel(get(), get()) }
-}
+        viewModel { OfferViewModel(get(), get()) }
+    }

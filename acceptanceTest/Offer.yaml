@@ -13,26 +13,36 @@ jsEngine: graaljs
 - assertVisible: ${output.countries[2]}
 - assertVisible: ${output.countries[3]}
 - assertVisible: ${output.countries[4]}
-- scrollUntilVisible:
-      element: ${output.countries[(output.length - 1)/2]}
-- scrollUntilVisible:
-      element: ${output.countries[output.length - 1]}
 
 # Given the App started When I tap on a Country Then I see the local eSIM offer
-- evalScript: ${output.offer = output.taiwan}
-- tapOn: ${output.offer}
-- extendedWaitUntil:
-    visible: ${output.offer.operator}
+- evalScript: ${output.offer = output.CountryPackages['china']}
+- evalScript: ${output.target = output.offer["title"]}
+- scrollUntilVisible:
+    element: ${output.target}
+- tapOn: ${output.target}
+- retry:
+    maxRetries: 2
+    commands:
+      - extendedWaitUntil:
+          visible: ${output.offer.packages[0]["operator"]["title"] + " is the operator for the following offer."}
 - tapOn: ${output.Strings.go_back}
 
-- extendedWaitUntil:
-    visible: ${output.countries[0]}
+- scrollUntilVisible:
+    element: ${output.countries[0]}
+    direction: UP
 
-- evalScript: ${output.offer = output.italy}
-- tapOn: ${output.offer}
-- extendedWaitUntil:
-    visible: ${output.offer.operator}
+- evalScript: ${output.offer = output.CountryPackages['serbia']}
+- evalScript: ${output.target = output.offer["title"]}
+- scrollUntilVisible:
+    element: ${output.target}
+- tapOn: ${output.target}
+- retry:
+    maxRetries: 2
+    commands:
+      - extendedWaitUntil:
+          visible: ${output.offer.packages[0]["operator"]["title"] + " is the operator for the following offer."}
 - back
 
-- extendedWaitUntil:
-    visible: ${output.countries[0]}
+- scrollUntilVisible:
+    element: ${output.countries[0]}
+    direction: UP

@@ -14,10 +14,14 @@ import com.airalo.example.offer.domain.entity.Price
 import com.airalo.example.offer.domain.entity.Validity
 import com.airalo.example.offer.domain.entity.Volume
 import com.airalo.example.offer.domain.repository.OfferRepositoryContract
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 internal class OfferRepository(
     private val countryApi: CountriesApi,
     private val offerApi: OffersInCountryApi,
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : OfferRepositoryContract {
     private fun List<CountryDTO>.toCountry(): List<Country> =
         map { dto ->
@@ -29,10 +33,12 @@ internal class OfferRepository(
         }
 
     override suspend fun listPopularCountries(): List<Country> {
-        return try {
-            countryApi.countries(type = CountriesApi.TypeCountries.popular).body().toCountry()
-        } catch (_: Throwable) {
-            emptyList()
+        return withContext(ioDispatcher) {
+            try {
+                countryApi.countries(type = CountriesApi.TypeCountries.popular).body().toCountry()
+            } catch (_: Throwable) {
+                emptyList()
+            }
         }
     }
 
@@ -52,10 +58,12 @@ internal class OfferRepository(
     }
 
     override suspend fun fetchOffersForCountry(id: Id): List<Offer> {
-        return try {
-            offerApi.countryOffers(id = id.id).body().toOffer()
-        } catch (_: Throwable) {
-            emptyList()
+        return withContext(ioDispatcher) {
+            try {
+                offerApi.countryOffers(id = id.id).body().toOffer()
+            } catch (_: Throwable) {
+                emptyList()
+            }
         }
     }
 }

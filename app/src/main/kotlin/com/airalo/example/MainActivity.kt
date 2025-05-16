@@ -9,13 +9,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import androidx.navigation.compose.rememberNavController
-import com.airalo.example.offer.presentation.ui.token.Spacing
-import com.airalo.example.ui.theme.AiraloTheme
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import com.airalo.example.offer.presentation.navigation.OfferRouter
 import com.airalo.example.offer.presentation.navigation.OfferRoutes
+import com.airalo.example.offer.presentation.ui.token.Spacing
+import com.airalo.example.ui.theme.AiraloTheme
 import org.koin.compose.getKoin
 
 class MainActivity : ComponentActivity() {
@@ -23,21 +23,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Airalo_Transparent)
         super.onCreate(savedInstanceState)
-        
+
         WindowCompat.setDecorFitsSystemWindows(window, false)
         enableEdgeToEdge()
-        
         setContent {
             AiraloTheme {
                 Scaffold {
+                    val navController = rememberNavController()
+                    val koin = getKoin()
+
                     Box(
-                        modifier = Modifier.padding(top = Spacing.m)
+                        modifier = Modifier.padding(top = Spacing.m),
                     ) {
-                        val navController = rememberNavController()
-                        val koin = getKoin()
                         NavHost(
+                            startDestination = OfferRoutes.COUNTRY_OVERVIEW.route,
                             navController = navController,
-                            startDestination = OfferRoutes.COUNTRY_OVERVIEW.route
                         ) {
                             OfferRouter(navController, koin)
                         }

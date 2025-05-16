@@ -1,9 +1,6 @@
 package com.airalo.example.offer.presentation.ui.atom
 
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,8 +8,6 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.invisibleToUser
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import com.airalo.example.offer.presentation.ui.token.Color
 import com.airalo.example.offer.presentation.ui.token.Font
 import com.airalo.example.offer.presentation.ui.token.Font.overviewCountryName
 
@@ -56,14 +51,14 @@ fun ScreenTitle(
         style = Font.screenTitle,
         modifier = Modifier
             .semantics {
-            contentDescription?.let {
-                if (contentDescription != null) {
-                    this.contentDescription = contentDescription
-                } else {
-                    this.invisibleToUser()
+                contentDescription?.let {
+                    if (contentDescription != null) {
+                        this.contentDescription = contentDescription
+                    } else {
+                        this.invisibleToUser()
+                    }
                 }
-            }
-        },
+            },
     )
 }
 
@@ -127,10 +122,8 @@ fun PurchaseButtonLabel(
 ) {
     Text(
         content,
-        textAlign = TextAlign.Start,
         style = Font.offerButtonLabel,
         modifier = Modifier
-            .fillMaxSize()
             .semantics {
                 if (contentDescription != null) {
                     this.contentDescription = contentDescription

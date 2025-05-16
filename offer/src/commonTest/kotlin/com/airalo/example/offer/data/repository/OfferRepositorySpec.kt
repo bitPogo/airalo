@@ -47,6 +47,7 @@ class OfferRepositorySpec {
     fun `When listPopularCountries is called Then it returns an empty list if the API end point fails`() =
         runTest {
             // Arrange
+            val ioDispatcher = DispatcherSpy(testScheduler)
             val expectedError = Error(serializedCountries)
             val apiEndpoint = CountriesApi(
                 baseUrl = ApiClient.BASE_URL,
@@ -57,19 +58,21 @@ class OfferRepositorySpec {
                 ),
             )
 
-            val repository = OfferRepository(apiEndpoint, dummyOffersApi)
+            val repository = OfferRepository(apiEndpoint, dummyOffersApi, ioDispatcher)
 
             // Act
             val countries = repository.listPopularCountries()
 
             // Assert
             countries mustBe emptyList()
+            ioDispatcher.hadBeenCalled mustBe true
         }
 
     @Test
     fun `When listPopularCountries is called Then it returns the list of countries provided by the API point`() =
         runTest {
             // Arrange
+            val ioDispatcher = DispatcherSpy(testScheduler)
             val apiEndpoint = CountriesApi(
                 baseUrl = ApiClient.BASE_URL,
                 httpClient = createMockClient(
@@ -85,7 +88,7 @@ class OfferRepositorySpec {
                 },
             )
 
-            val repository = OfferRepository(apiEndpoint, dummyOffersApi)
+            val repository = OfferRepository(apiEndpoint, dummyOffersApi, ioDispatcher)
 
             // Act
             val countries = repository.listPopularCountries()
@@ -98,12 +101,15 @@ class OfferRepositorySpec {
                     name = it.title,
                 )
             }
+
+            ioDispatcher.hadBeenCalled mustBe true
         }
 
     @Test
     fun `When fetchOffersForCountry is called Then it returns an empty list if the API end point fails`() =
         runTest {
             // Arrange
+            val ioDispatcher = DispatcherSpy(testScheduler)
             val expectedError = Error(serializedCountries)
             val apiEndpoint = OffersInCountryApi(
                 baseUrl = ApiClient.BASE_URL,
@@ -114,19 +120,21 @@ class OfferRepositorySpec {
                 ),
             )
 
-            val repository = OfferRepository(dummyCountryApi, apiEndpoint)
+            val repository = OfferRepository(dummyCountryApi, apiEndpoint, ioDispatcher)
 
             // Act
             val offers = repository.fetchOffersForCountry(Id(12))
 
             // Assert
             offers mustBe emptyList()
+            ioDispatcher.hadBeenCalled mustBe true
         }
 
     @Test
     fun `When fetchOffersForCountry is called Then it returns the list of offers provided by the API point`() =
         runTest {
             // Arrange
+            val ioDispatcher = DispatcherSpy(testScheduler)
             val countryId = Id(23)
             val apiEndpoint = OffersInCountryApi(
                 baseUrl = ApiClient.BASE_URL,
@@ -143,7 +151,7 @@ class OfferRepositorySpec {
                 },
             )
 
-            val repository = OfferRepository(dummyCountryApi, apiEndpoint)
+            val repository = OfferRepository(dummyCountryApi, apiEndpoint, ioDispatcher)
 
             // Act
             val offers = repository.fetchOffersForCountry(countryId)
@@ -163,6 +171,8 @@ class OfferRepositorySpec {
             offers.last().validity.validity mustBe this@OfferRepositorySpec.offers.packages.last().validity
             offers.last().volume.volume mustBe this@OfferRepositorySpec.offers.packages.last().data
             offers.last().location mustBe this@OfferRepositorySpec.offers.title
+
+            ioDispatcher.hadBeenCalled mustBe true
         }
 
     @Test

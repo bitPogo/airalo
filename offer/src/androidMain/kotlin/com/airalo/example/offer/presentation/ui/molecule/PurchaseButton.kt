@@ -39,8 +39,9 @@ fun PurchaseButton(price: Price) {
                     ),
             ) {
                 Box(
+                    contentAlignment = Alignment.Center,
                     modifier = Modifier
-                        .width(Size.surface.purchaseButtonLabel.width)
+                        .fillMaxWidth()
                         .height(Size.surface.purchaseButtonLabel.height),
                 ) {
                     PurchaseButtonLabel(

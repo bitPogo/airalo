@@ -15,29 +15,30 @@ import org.koin.dsl.module
 private const val RAW_CLIENT = "RAW_CLIENT"
 
 @OptIn(ExperimentalSerializationApi::class)
-fun resolveClientKoin() = module {
-    factory(named(RAW_CLIENT)) {
-        HttpClient(CIO) {
-            install(Logging) {
-                logger = Logger.SIMPLE
-                level = LogLevel.ALL
+fun resolveClientKoin() =
+    module {
+        factory(named(RAW_CLIENT)) {
+            HttpClient(CIO) {
+                install(Logging) {
+                    logger = Logger.SIMPLE
+                    level = LogLevel.ALL
+                }
             }
         }
-    }
 
-    single {
-        Json {
-            allowTrailingComma = true
-            ignoreUnknownKeys = true
-            isLenient = true
+        single {
+            Json {
+                allowTrailingComma = true
+                ignoreUnknownKeys = true
+                isLenient = true
+            }
+        }
+
+        single {
+            HttpClientConfigurator(json = get()).configure(get(named(RAW_CLIENT)))
+        }
+
+        single(qualifier = named("BaseUrl")) {
+            "https://www.airalo.com/api/v2/"
         }
     }
-
-    single {
-        HttpClientConfigurator(json = get()).configure(get(named(RAW_CLIENT)))
-    }
-
-    single(qualifier = named("BaseUrl")) {
-        "https://www.airalo.com/api/v2/"
-    }
-}

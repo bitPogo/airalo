@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import coil3.ColorImage
@@ -22,6 +23,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
+import tech.antibytes.util.test.mustBe
 
 @RunWith(AndroidJUnit4::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
@@ -43,9 +45,10 @@ class CountryItemSpec : RoborazziTest() {
     }
 
     @Test
-    fun `It renders a CountryItem with the Country name as ContentDescription`() {
+    fun `It renders a CountryItem with the Country name as ContentDescription, which is clickable`() {
         // Arrange
         val countryName = "Germany"
+        var wasClicked = false
 
         // Act
         subjectUnderTest.setContent {
@@ -55,10 +58,14 @@ class CountryItemSpec : RoborazziTest() {
                     name = "Germany",
                     flag = CountryFlagUri("https://example.com/image.jpg"),
                 ),
-            )
+            ) {
+                wasClicked = true
+            }
         }
 
-        // Assert
-        subjectUnderTest.onNodeWithContentDescription(countryName).assertExists()
+        subjectUnderTest.onNodeWithContentDescription(countryName).performClick()
+
+        // Then
+        wasClicked mustBe true
     }
 }

@@ -15,7 +15,7 @@ class ClientKoinSpec {
     fun `It resolves an configured HttpClient`() {
         val koin = koinApplication {
             modules(
-                resolveClientKoin()
+                resolveClientKoin(),
             )
         }
 
@@ -30,7 +30,7 @@ class ClientKoinSpec {
     fun `It resolves a Json (De)Serializer`() {
         val koin = koinApplication {
             modules(
-                resolveClientKoin()
+                resolveClientKoin(),
             )
         }
 
@@ -49,7 +49,7 @@ class ClientKoinSpec {
     fun `It contains a BaseUrl`() {
         val koin = koinApplication {
             modules(
-                resolveClientKoin()
+                resolveClientKoin(),
             )
         }
 

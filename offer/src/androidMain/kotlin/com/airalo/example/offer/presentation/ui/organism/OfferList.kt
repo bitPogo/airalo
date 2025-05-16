@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.airalo.example.offer.domain.entity.Offer
 import com.airalo.example.offer.presentation.ui.atom.MVerticalSpace
@@ -21,6 +22,7 @@ fun OfferList(offers: List<Offer>) {
     ) {
         LazyColumn(
             state = listState,
+            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.padding(
                 start = Spacing.m,
                 end = Spacing.m,

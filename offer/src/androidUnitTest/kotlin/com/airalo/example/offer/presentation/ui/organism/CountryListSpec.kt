@@ -15,6 +15,7 @@ import com.airalo.example.offer.domain.entity.CountryFlagUri
 import com.airalo.example.offer.domain.entity.Id
 import com.airalo.example.test.roborazzi.RoborazziTest
 import com.airalo.example.test.roborazzi.TestApplication
+import io.mockk.mockk
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -98,7 +99,7 @@ class CountryListSpec : RoborazziTest() {
 
         // Act
         subjectUnderTest.setContent {
-            CountryList(countries)
+            CountryList(countries, mockk()) {}
         }
     }
 }

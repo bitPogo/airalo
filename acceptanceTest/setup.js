@@ -7,12 +7,12 @@ function getFromApi(url) {
    }).body)
 }
 
-const countries = getFromApi('https://www.airalo.com/api/v2/countries')
+const countries = getFromApi('https://www.airalo.com/api/v2/countries?type=popular')
 output.countries = countries.map(country => country.title)
 
-const ids = countries.filter(country => country.title === 'Germany' || country.title === 'Taiwan').map(country => country.id)
+const ids = countries.map(country => country.id)
 output.CountryPackages = {}
 ids.forEach(id => {
     const countryPackages = getFromApi('https://www.airalo.com/api/v2/countries/' + id)
-    output.CountryPackages[countryPackages.slug] = countryPackages.packages
+    output.CountryPackages[countryPackages.slug] = countryPackages
 })

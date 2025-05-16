@@ -24,6 +24,7 @@ import com.airalo.example.offer.presentation.viewmodel.OfferCommandExecutor
 import com.airalo.example.offer.presentation.viewmodel.OfferCommandReceiver
 import com.airalo.example.test.roborazzi.RoborazziTest
 import com.airalo.example.test.roborazzi.TestApplication
+import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -112,7 +113,7 @@ class CountryOfferOverviewSpec : RoborazziTest() {
         val viewModel = FakeOfferPreviewViewModel(countries)
         // Act
         subjectUnderTest.setContent {
-            CountryOfferOverview(viewModel, viewModel)
+            CountryOfferOverview(viewModel, mockk(), viewModel)
         }
     }
 

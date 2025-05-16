@@ -3,6 +3,7 @@
 package com.airalo.example.offer.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavController
 import app.cash.turbine.test
 import com.airalo.example.offer.api.model.OfferDTO
 import com.airalo.example.offer.domain.entity.Country
@@ -19,6 +20,8 @@ import com.airalo.example.offer.presentation.model.OfferPackageStateHolder
 import com.airalo.example.offer.presentation.model.OfferPackageUiState
 import com.airalo.example.offer.presentation.ui.command.LoadOfferPackageForCountryCommand
 import com.goncalossilva.resources.Resource
+import io.mockk.every
+import io.mockk.mockk
 import kotlin.test.Test
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -76,9 +79,12 @@ class OfferPackageViewModelSpec {
             val countryId = Id(23)
             val interactor = InteractorFake(mutableListOf(offers))
             val viewModel = OfferViewModel(DummyCountryInteractor, interactor)
+            val router: NavController = mockk {
+                every { navigate(any<String>()) } returns Unit
+            }
             viewModel.offers.test {
                 // Act
-                viewModel(LoadOfferPackageForCountryCommand(countryId))
+                viewModel(LoadOfferPackageForCountryCommand(countryId, router))
                 advanceUntilIdle()
 
                 // Assert
@@ -99,9 +105,12 @@ class OfferPackageViewModelSpec {
                 DummyCountryInteractor,
                 interactor,
             )
+            val router: NavController = mockk {
+                every { navigate(any<String>()) } returns Unit
+            }
             viewModel.offers.test {
                 // Act
-                viewModel(LoadOfferPackageForCountryCommand(countryId))
+                viewModel(LoadOfferPackageForCountryCommand(countryId, router))
                 advanceUntilIdle()
 
                 // Assert
@@ -119,10 +128,13 @@ class OfferPackageViewModelSpec {
             val countryId = Id(23)
             val interactor = InteractorFake(mutableListOf(offers, emptyList()))
             val viewModel = OfferViewModel(DummyCountryInteractor, interactor)
+            val router: NavController = mockk {
+                every { navigate(any<String>()) } returns Unit
+            }
 
             viewModel.offers.test {
                 // Act
-                viewModel(LoadOfferPackageForCountryCommand(countryId))
+                viewModel(LoadOfferPackageForCountryCommand(countryId, router))
                 advanceUntilIdle()
 
                 // Assert
@@ -131,7 +143,7 @@ class OfferPackageViewModelSpec {
                 awaitItem() mustBe OfferPackageUiState.Success(offers)
 
                 // Act
-                viewModel(LoadOfferPackageForCountryCommand(countryId))
+                viewModel(LoadOfferPackageForCountryCommand(countryId, router))
                 advanceUntilIdle()
 
                 // Assert

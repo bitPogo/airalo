@@ -11,11 +11,9 @@ private val TransparentPrimaryColorScheme = lightColorScheme(
 )
 
 @Composable
-fun AiraloTheme(
-    content: @Composable () -> Unit
-) {
+fun AiraloTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = TransparentPrimaryColorScheme,
-        content = content
+        content = content,
     )
-} 
+}

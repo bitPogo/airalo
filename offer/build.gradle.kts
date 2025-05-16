@@ -67,6 +67,7 @@ kotlin {
                 implementation(dependencyCatalog.ktor.cio)
                 implementation(compose.material3)
                 implementation(dependencyCatalog.bundles.coil)
+                implementation(dependencyCatalog.compose.navigation)
             }
         }
 

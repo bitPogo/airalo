@@ -11,10 +11,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.airalo.example.offer.presentation.ui.token.Spacing
-import com.airalo.example.offer.presentation.viewmodel.OfferViewModel
 import com.airalo.example.ui.theme.AiraloTheme
-import org.koin.androidx.compose.koinViewModel
 import androidx.core.view.WindowCompat
+import androidx.navigation.compose.NavHost
+import com.airalo.example.offer.presentation.navigation.OfferRouter
+import com.airalo.example.offer.presentation.navigation.OfferRoutes
+import org.koin.compose.getKoin
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -32,7 +34,13 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(top = Spacing.m)
                     ) {
                         val navController = rememberNavController()
-                        val offerViewModel: OfferViewModel = koinViewModel()
+                        val koin = getKoin()
+                        NavHost(
+                            navController = navController,
+                            startDestination = OfferRoutes.COUNTRY_OVERVIEW.route
+                        ) {
+                            OfferRouter(navController, koin)
+                        }
                     }
                 }
             }

@@ -23,7 +23,7 @@ The project follows a modular architecture with the following:
 
 - **Language**: Kotlin
 - **UI Framework**: Jetpack Compose
-- **Architecture**: Declarative UI, Command Pattern and what is commonly know as Clean Architecture
+- **Architecture**: Declarative UI/Atomic Design, Command Pattern and what is commonly know as Clean Architecture
 - **Dependency Injection**: Koin
 - **Navigation**: Jetpack Navigation Compose
 - **Build System**: Gradle with Kotlin DSL
@@ -35,6 +35,8 @@ The project follows a modular architecture with the following:
 - JDK 17 or later
 - Android SDK 34 or later
 - Android SDK commandline tools (optional/for Acceptance tests)
+- [Maestro](https://docs.maestro.dev/) (optional/for Acceptance tests)
+- A pre setup Android emulator which is call `MaestroTestRunner`
 
 ## 📦 Dependencies
 
@@ -84,7 +86,10 @@ The project uses Gradle with Kotlin DSL and includes:
 # Run screenshot tests
 ./gradlew :test:roborazzi:test
 
-# Run accetance tests
+# Run screenshot tests excluding known failing visual regression tests
+./gradlew :test:roborazzi:test --tests "!*CountryListSpec" --tests "!*OfferListSpec" --tests "!*CountryOfferOverviewSpec" --tests "!*OfferPackageScreenSpec"
+
+# Run acceptance tests
 ./acceptanceTest/test.sh
 ```
 
@@ -100,24 +105,10 @@ The project uses Gradle with Kotlin DSL and includes:
 ./gradlew koverHtmlReport
 ```
 
-### Installation Commands
-```bash
-# Install debug version
-./gradlew :app:installDebug
-
-# Install release version
-./gradlew :app:installRelease
-```
-
 ### Development Commands
 ```bash
 # List all available tasks
 ./gradlew tasks
-
-# Run with specific Gradle options
-./gradlew build --stacktrace
-./gradlew build --info
-./gradlew build --debug
 ```
 
 ### OpenAPI Commands
@@ -147,6 +138,20 @@ The project uses Gradle with Kotlin DSL and includes:
 ## ⚠️ Known Issues
 ### Build and Development
 - You might see a couple of warning - the project uses a outdated Spotless configuration
-- The convention Plugins causeing some warning due to the dependency resolution
+- The convention Plugins causing some warning due to the dependency resolution
 - You might encounter an issue that the OpenApi. In a few instances it happened that the infrastructure was deleted by the client generation.
  if this is the case please run `./gradlew openApiInfrastructureGenerate` which should resolve the problem.
+- Maestro cannot deal with multiple emulators
+
+### Visual Regression Tests
+The following screenshot tests are known to fail due to platform-specific rendering differences:
+- `CountryListSpec`
+- `OfferListSpec`
+- `CountryOfferOverviewSpec`
+- `OfferPackageScreenSpec`
+
+These tests might fail due to differences in how different platforms render the UI components. This is a known limitation of visual regression testing across different environments.
+For now the Visual Regression Tests are disabled.
+To reasonable them change the following properties to true:
+- `roborazzi.test.compare`
+- `roborazzi.test.verify`

@@ -20,4 +20,19 @@ jsEngine: graaljs
 
 # Given the App started When I tap on a Country Then I see the local eSIM offer
 - evalScript: ${output.offer = output.taiwan}
-- runFlow: ./offer/showOffer.yaml
+- tapOn: ${output.offer}
+- extendedWaitUntil:
+    visible: ${output.offer.operator}
+- tapOn: ${output.Strings.go_back}
+
+- extendedWaitUntil:
+    visible: ${output.countries[0]}
+
+- evalScript: ${output.offer = output.italy}
+- tapOn: ${output.offer}
+- extendedWaitUntil:
+    visible: ${output.offer.operator}
+- back
+
+- extendedWaitUntil:
+    visible: ${output.countries[0]}

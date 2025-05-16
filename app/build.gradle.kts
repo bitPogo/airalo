@@ -19,4 +19,5 @@ dependencies {
     implementation(dependencyCatalog.koin.android)
     implementation(dependencyCatalog.koin.androidx.compose)
     implementation(dependencyCatalog.bundles.app.compose)
+    implementation(dependencyCatalog.androidx.material3.icons.core)
 }

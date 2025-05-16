@@ -67,3 +67,10 @@ include(
     ":test:mockclientfactory",
     ":test:roborazzi",
 )
+
+buildCache {
+    local {
+        isEnabled = true
+        directory = File(rootDir, "build-cache")
+    }
+}

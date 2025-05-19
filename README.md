@@ -86,9 +86,6 @@ The project uses Gradle with Kotlin DSL and includes:
 # Run screenshot tests
 ./gradlew :test:roborazzi:test
 
-# Run screenshot tests excluding known failing visual regression tests
-./gradlew :test:roborazzi:test --tests "!*CountryListSpec" --tests "!*OfferListSpec" --tests "!*CountryOfferOverviewSpec" --tests "!*OfferPackageScreenSpec"
-
 # Run acceptance tests
 ./acceptanceTest/test.sh
 ```

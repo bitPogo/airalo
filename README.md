@@ -36,7 +36,7 @@ The project follows a modular architecture with the following:
 - Android SDK 34 or later
 - Android SDK commandline tools (optional/for Acceptance tests)
 - [Maestro](https://docs.maestro.dev/) (optional/for Acceptance tests)
-- A pre setup Android emulator which is call `MaestroTestRunner`
+- A pre setup Android emulator which is call `MaestroTestRunner` (optional/for Acceptance tests) 
 
 ## 📦 Dependencies
 
